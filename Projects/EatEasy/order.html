@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>EatEasy</title>
+    </head>
+    <body class="order-page">
+        <header>
+			<span class="menu-toggle"></span>
+			<a href="#" class="logo-link">
+				<img src="img/eateasy-logo.png" alt="EatEasy Logo"/>
+			</a>
+			<form action="/search" class="search">
+				<button class="search-btn"></button>
+			</form>
+			
+			<nav class="menu-wrap">
+				<ul class="top-menu">
+					<li>
+						<a href="chosemeal.html" class="search-icon">Подобрать обед</a>
+					</li>
+					<li>
+						<a href="cuisine.html" class="star-icon">Категории ресторанов</a>
+					</li>
+					<li>
+						<a href="favrest.html" class="heart-icon">Любимые рестораны</a>
+					</li>
+				</ul>
+				<ul class="bottom-menu">
+					<li>
+						<a href="active-orders.html" class="order-icon">Мои заказы</a>
+					</li>
+					<li>
+						<a href="cards.html" class="data-icon">Данные для оплаты</a>
+					</li>
+					<li>
+						<a href="about.html" class="about-icon">О программе</a>
+					</li>
+					<li>
+						<a href="support.html" class="support-icon">Служба поддержки</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		
+		<section>
+
+			<div class="content">
+			
+				<div class="place-info-wrap">
+					<div class="img-wrap">
+						<img src="img/patio-logo.png" class="place-logo"/>
+					</div>
+					<div class="place-info">
+						<h2 class="place-name">Иль Патио</h2>
+						<div>Манежная пл., д.1, стр.2</div>
+					</div>
+					<div class="sub-info">
+						<span class="bold">595</span>
+						<span>метров</span>
+					</div>
+				</div>
+				
+				<ul class="order-list list">
+					<li>
+						<div class="product-info">
+							<a href="product.html" class="product-name">
+								Спагетти Нери с Морепродуктами
+							</a>
+						</div>
+						<div class="count">
+							<button class="minus disabled"></button>
+							<input type="text" class="qty" id="" value="1" disabled="">
+							<button class="plus"></button>
+						</div>
+						<div class="sub-info">
+							<span class="bold">595</span>
+							<span>рублей</span>
+						</div>
+						<button class="remove-btn"></button>
+					</li>
+					<li>
+						<div class="product-info">
+							<a href="product.htm" class="product-name">
+								Спагетти Нери с Морепродуктами
+							</a>
+						</div>
+						<div class="count">
+							<button class="minus disabled"></button>
+							<input type="text" class="qty" id="" value="1" disabled="">
+							<button class="plus"></button>
+						</div>
+						<div class="sub-info">
+							<span class="bold">595</span>
+							<span>рублей</span>
+						</div>
+						<button class="remove-btn"></button>
+					</li>
+					<li>
+						<div class="product-info">
+							<a href="product.htm" class="product-name">
+								Спагетти Нери с Морепродуктами
+							</a>
+						</div>
+						<div class="count">
+							<button class="minus disabled"></button>
+							<input type="text" class="qty" id="" value="1" disabled="">
+							<button class="plus"></button>
+						</div>
+						<div class="sub-info">
+							<span class="bold">595</span>
+							<span>рублей</span>
+						</div>
+						<button class="remove-btn"></button>
+					</li>
+				</ul>
+				<div class="processing-time">20 минут</div>
+				<div class="total-info">
+					<span class="bold">595</span>
+					<span>рублей</span>
+				</div>
+			</div>
+		</section>
+		
+		<footer>
+				<div class="buttons-group">
+					<a href="#back" onclick="goBack()" class="back-btn left-btn"></a>
+					<div class="green-wrap">
+						<a href="#" onclick="ShowFirstModal();return false;" class="basket-link"></a>
+					</div>
+					<a href="#cancel" class="cancel-link right-btn"></a>
+				</div>
+		</footer>
+		
+		<div class="modal-wrap">
+			<div class="modal">
+			
+				<div class="first-slide">
+					<p>Ваш заказ из 15 позиций на общую сумму <span class="modal-price">1 751 рубль</span>
+						будет готов в течении 
+						20 минут в ресторане
+						<span class="modal-place">ИЛЬ ПАТИО</span> по адресу Манежная пл., д.1, стр. 2</p>
+					<a href="#" onclick="ShowSecondModal();" class="link-btn">оплатить</a>
+					<button class="cancel-link-btn">отмена</button>
+				</div>
+				
+				<div class="second-slide">
+						<h2>выберите вариант оплаты:</h2>
+					<form action="" class="card-info">
+						<ul class="select-list">
+							<li><a href="">кредитная карта</a></li>
+						</ul>
+						<input type="text" name="name" value="KONSTANTINOV KONSTANTIN"/>
+						<input type="text" name="card-type" value="visa"/>
+						<input type="text" name="card-number" value="**** **** **** **** 3635"/>
+						<a href="#" onclick="ShowThirdModal();" class="link-btn">оплатить</a>
+						<button class="cancel-link-btn">отмена</button>
+					</form>
+				</div>
+				
+				<div class="third-slide">
+					<h2>спасибо</h2>
+					<p>Ваш заказ будет готов через:</p>
+					<div class="processing-time">20 минут</div>
+					<button class="link-btn">напомнить</button>
+					<button class="cancel-link-btn">закрыть</button>
+				</div>
+			</div>
+			</div>
+			
+		</div>
+		
+        <script type="text/javascript" src="js/cordova.js"></script>
+		<script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

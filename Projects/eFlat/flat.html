@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title here -->
+	<title>eFlat</title>
+	<meta charset="utf-8"/>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="eFlat">
+	<meta name="keywords" content="eFlat">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Styles -->
+	<link href="style/css/style.css" rel="stylesheet">
+	<!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- scripts TeST -->
+     	<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    	<link href="js/css/css_for_js.css" rel="stylesheet">
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/jquery-ui-1.10.4.custom.min.js"></script><!--datepicker-->
+    	<script src="js/jquery.cycle2.min.js"></script>
+		<script src="js/jquery.cycle2.carousel.min.js"></script>
+		<script src="js/jquery.custom-scrollbar.min.js"></script>
+		<script src="js/bootstrap-rating-input.js"></script>
+    	<script src="js/scripts.js"></script>
+    	<script src="js/custom-maps.js"></script>
+    <!-- end scripts TeST -->
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+</head>
+<body>
+	<header class="navbar" role="banner">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="../" class="navbar-brand">eFlat</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+				  <a href="#">Регистрация</a>
+				</li>
+				<li>
+				  <a href="#" rel="login">Войти</a>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Помощь<b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Перейти в раздел FAQ</a></li>
+					<li class="divider"></li>
+					<li><a href="#">С чего начать</a></li>
+					<li><a href="#">Как создать аккаунт?</a></li>
+					<li><a href="#">Как сдать жилье</a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a class="btn btn-primary" href="#">Сдайте свое жилье</a>
+				</li>
+			</ul>
+		</nav>
+	  </div>
+	</header>
+	
+	<div class="container">
+	
+		<div class="block">
+			<a href="#page-back" onclick="goBack()" class="decor-link">&larr; Вернутся к результатам поиска (324 квартиры)</a>
+		</div>
+		
+		<div class="block flat-title">
+			<h1 class="main-header">Двухкомнатная квартира в центре Львова <a href="#tab_map" data-toggle="tab" class="text-muted small address-tab-link">ул. Городоцкая 16, город Львов</a></h1>
+			<div class="tags"><span class="glyphicon glyphicon-tags"></span><a href="">Львов</a>, <a href="">2 комнаты</a>, <a href="">недорого</a></div>
+		</div>
+		
+		<div class="block small-margin">
+			<div class="short-desk">Двухкомнатная квартира в центре Львова площадью 130 кв метров, которая вместит 10 человек</div>
+		</div>
+		
+		<!-- Media Tabs -->
+		<div class="block small-margin row">
+		
+			<!-- media -->
+			<div class="col-lg-8 col-md-7 media-info">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#photo" data-toggle="tab">Фотографии</a></li>
+				  <li><a href="#tab_map" data-toggle="tab">Карта</a></li>
+				  <li><a href="#street" data-toggle="tab">Как выглядит улица</a></li>
+				  <li><a href="#calendar" data-toggle="tab">Календарь</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+				  <div class="tab-pane active" id="photo">
+						<ul class="cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-carousel-fluid="true " data-cycle-timeout="0" data-cycle-prev=".prev" data-cycle-next=".next, .cycle-slide" data-cycle-slides=">li">
+							<li data-cycle-hash="img1"><img src="images/apt.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img8"><img src="images/apt2.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img2"><img src="images/lviv.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img3"><img src="images/kiev.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img4"><img src="images/apt.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img5"><img src="images/lviv.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img6"><img src="images/kiev.jpg" class="apt-img img-responsive" alt=""/></li>
+							<li data-cycle-hash="img7"><img src="images/apt2.jpg" class="apt-img img-responsive" alt=""/></li>
+
+						  <!-- Controls -->
+							<a class="left carousel-control prev" href="#carousel-example-generic">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							</a>
+							<a class="right carousel-control next" href="#carousel-example-generic">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</ul>
+						<!-- Carusel -->
+						<div class="img-wrap carousel">
+						
+							<ul class="apt-carousel cycle-slideshow" data-cycle-fx="carousel" data-cycle-carousel-visible="6" data-cycle-carousel-fluid="true " data-cycle-timeout="0"  data-cycle-prev=".left"  data-cycle-next=".right" data-cycle-slides=".apt-carousel-item">
+								<li class="apt-carousel-item active">
+									<a href="#img1"><img src="images/apt_small.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img8"><img src="images/apt2.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img2"><img src="images/lviv.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img3"><img src="images/kiev.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img4"><img src="images/apt.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img5"><img src="images/lviv.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img6"><img src="images/kiev.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+								<li class="apt-carousel-item">
+									<a href="#img7"><img src="images/apt2.jpg" class="apt-img img-responsive" alt=""/></a>
+								</li>
+							</ul>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic">
+								<span class="glyphicon glyphicon-chevron-left"></span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic">
+								<span class="glyphicon glyphicon-chevron-right"></span>
+							  </a>
+						</div>
+				  </div>
+				  <div class="tab-pane" id="tab_map">
+						<div id="flat_map"></div>
+				  </div>
+				  <div class="tab-pane" id="street"></div>
+				  <div class="tab-pane" id="calendar">
+					<div class="row calendar-block">
+						<div class="col-lg-7" id="calendar2">
+							<form accept-charset="UTF-8" action="/" id="calendar-refresh-form" method="post">
+								<div class="form-group">
+									<label for="calendar-date">Выберите месяц</label>
+									<select id="calendar-date" class="form-control" name="calendar-date">
+										<option value="2014/02/01" selected="selected">февраль 2014</option>
+										<option value="2014/03/01">март 2014</option>
+										<option value="2014/04/01">апрель 2014</option>
+										<option value="2014/05/01">май 2014</option>
+										<option value="2014/06/01">июнь 2014</option>
+										<option value="2014/07/01">июль 2014</option>
+										<option value="2014/08/01">август 2014</option>
+										<option value="2014/09/01">сентябрь 2014</option>
+										<option value="2014/10/01">октябрь 2014</option>
+										<option value="2014/11/01">ноябрь 2014</option>
+										<option value="2014/12/01">декабрь 2014</option>
+									</select>
+								  </div>
+
+								<div id="calendar-inner-container">
+									<table cellspacing="0" id="calendar_table" class="table table-bordered">
+									  <tbody>
+										<tr>
+											<th>Пн</th>
+											<th>Вт</th>
+											<th>Ср</th>
+											<th>Чт</th>
+											<th>Пт</th>
+											<th>Сб</th>
+											<th>Вс</th>
+										</tr>
+
+										
+										  <tr>
+											  <td id="day_0" class="realday in_the_past">
+												<span class="dom">27</span>
+											  </td>
+											  <td id="day_1" class="realday in_the_past">
+												<span class="dom">28</span>
+											  </td>
+											  <td id="day_2" class="realday in_the_past">
+												<span class="dom">29</span>
+											  </td>
+											  <td id="day_3" class="realday in_the_past">
+												<span class="dom">30</span>
+											  </td>
+											  <td id="day_4" class="realday in_the_past">
+												<span class="dom">31</span>
+											  </td>
+											  <td id="day_5" class="weekend in_the_past">
+												<span class="dom">1</span>
+											  </td>
+											  <td id="day_6" class="weekend in_the_past">
+												<span class="dom">2</span>
+											  </td>
+										  </tr>
+
+										  <tr>
+											  <td id="day_7" class="realday in_the_past">
+												<span class="dom">3</span>
+											  </td>
+											  <td id="day_8" class="realday in_the_past">
+												<span class="dom">4</span>
+											  </td>
+											  <td id="day_9" class="realday in_the_past">
+												<span class="dom">5</span>
+											  </td>
+											  <td id="day_10" class="realday in_the_past">
+												<span class="dom">6</span>
+											  </td>
+											  <td id="day_11" class="realday in_the_past">
+												<span class="dom">7</span>
+											  </td>
+											  <td id="day_12" class="weekend in_the_past">
+												<span class="dom">8</span>
+											  </td>
+											  <td id="day_13" class="weekend in_the_past">
+												<span class="dom">9</span>
+											  </td>
+										  </tr>
+
+										  <tr>
+											  <td id="day_14" class="realday in_the_past">
+												<span class="dom">10</span>
+											  </td>
+											  <td id="day_15" class="realday in_the_past">
+												<span class="dom">11</span>
+											  </td>
+											  <td id="day_16" class="realday in_the_past">
+												<span class="dom">12</span>
+											  </td>
+											  <td id="day_17" class="realday in_the_past">
+												<span class="dom">13</span>
+											  </td>
+											  <td id="day_18" class="realday in_the_past">
+												<span class="dom">14</span>
+											  </td>
+											  <td id="day_19" class="weekend in_the_past">
+												<span class="dom">15</span>
+											  </td>
+											  <td id="day_20" class="weekend in_the_past">
+												<span class="dom">16</span>
+											  </td>
+										  </tr>
+
+										  <tr>
+											  <td id="day_21" class="realday in_the_past">
+												<span class="dom">17</span>
+											  </td>
+											  <td id="day_22" class="realday in_the_past">
+												<span class="dom">18</span>
+											  </td>
+											  <td id="day_23" class="realday unavailable">
+												<span class="dom">19</span>
+											  </td>
+											  <td id="day_24" class="realday available">
+												<span class="dom">20</span>
+												  <div id="day_extra_24" class="extra">
+													2677uah
+												  </div>
+											  </td>
+											  <td id="day_25" class="realday available">
+												<span class="dom">21</span>
+												  <div id="day_extra_25" class="extra">
+													267 uah
+												  </div>
+											  </td>
+											  <td id="day_26" class="weekend unavailable">
+												<span class="dom">22</span>
+											  </td>
+											  <td id="day_27" class="weekend unavailable">
+												<span class="dom">23</span>
+											  </td>
+										  </tr>
+
+										  <tr>
+											  <td id="day_28" class="realday unavailable">
+												<span class="dom">24</span>
+											  </td>
+											  <td id="day_29" class="realday unavailable">
+												<span class="dom">25</span>
+											  </td>
+											  <td id="day_30" class="realday available">
+												<span class="dom">26</span>
+												  <div id="day_extra_30" class="extra">
+													267 uah
+												  </div>
+											  </td>
+											  <td id="day_31" class="realday unavailable">
+												<span class="dom">27</span>
+											  </td>
+											  <td id="day_32" class="realday unavailable">
+												<span class="dom">28</span>
+											  </td>
+											  <td id="day_33" class="weekend unavailable">
+												<span class="dom">1</span>
+											  </td>
+											  <td id="day_34" class="weekend unavailable">
+												<span class="dom">2</span>
+											  </td>
+										  </tr>
+									  </tbody>
+									</table>
+								</div>
+
+							  <div class="annotation">
+								<div class="available key">&nbsp;</div>
+								<div class="key-text">Свободно</div>
+
+								<div class="unavailable key">&nbsp;</div>
+								<div class="key-text">Занято</div>
+
+								<div class="in_the_past key">&nbsp;</div>
+								<div class="key-text">Прошлое</div>
+							  </div>
+						</form>  
+						</div>
+						<div class="col-lg-5 calendar-text">
+							<p>
+							  Календарь обновляется раз в пять минут и является приблизительным.
+							</p>
+							<p>
+							  Некоторые хозяева устанавливают специальные цены на определенные дни, обычно выходные или праздничные. Цены в этом случае указываются за день и не включают уборку или сборы за дополнительных гостей. Для получения более подробной информации кликните на вкладку Описание.
+							</p>
+							<p>
+							  Мы рекомендуем связаться с хозяином, чтобы подтвердить доступность жилья и цену, прежде чем отправлять заявку на бронирование.
+							</p>
+						  </div>
+					</div>
+				  </div>
+			</div>
+			
+			</div>
+			
+			<!-- buy -->
+			<div class="col-lg-4 col-md-5 main-info">
+				
+				<div class="booking-info">
+					<form class="booking-form form-inline panel panel-default" role="form">
+						<div class="panel-body">
+							<div class="price-info clearfix">
+								<div class="price">От <span>480 грн</span></div>
+								<div class="for-period short">
+									<select class="form-control">
+										<option>За день</option>
+										<option>За неделю</option>
+										<option>За месяц</option>
+										<option>За год</option>
+									</select>
+								</div>
+							</div>
+					  
+							<div class="form-line">
+								<div class="form-group short">
+									<input type="text" class="form-control" id="startDate" placeholder="Заезд"><span class="glyphicon glyphicon-calendar d-start"></span>
+								</div>
+
+								<div class="form-group short">
+									<input type="text" class="form-control" id="endDate" placeholder="Отъезд"><span class="glyphicon glyphicon-calendar d-end"></span>
+								</div>
+
+								<div class="form-group short">
+									<select class="form-control">
+										<option>1 гость</option>
+										<option>2 гостя</option>
+										<option>3 гостя</option>
+										<option>4 гостя</option>
+										<option>5 гостя</option>
+									</select>
+								</div>
+							</div>
+							
+						</div>
+						
+						<div class="panel-footer">
+							<div class="approximate-price">Промежуточная cумма <strong>1300 грн</strong></div>
+							<button type="submit" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#booking">Забронировать</button>
+						</div>
+					</form>
+				</div>
+				
+				<div class="owner-block panel panel-default">
+				  <div class="panel-heading">Представитель владельца</div>
+				  <div class="panel-body">
+					<div class="row">
+						<span class="col-xs-4">Имя:</span><span class="col-xs-8">Вячеслав</span>
+						<span class="col-xs-4">Рейтинг:</span>
+						<span class="col-xs-8">
+							<div class="stars">
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"></span>
+								<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+								<span class="glyphicon glyphicon-star empty-star"></span>
+							</div>
+						</span>
+					</div>
+					<div class="row hidden-owner-info">
+						<span class="col-xs-4">Телефон:</span><span class="col-xs-8">+38 (066) 123-45-46<br>+38 (050) 123-45-46</span>
+						<span class="col-xs-4">Почта:</span><span class="col-xs-8">owner@somepost.com</span>
+						<span class="col-xs-4">Skype:</span><span class="col-xs-8">owner</span>
+						<span class="col-xs-12"><p class="text-italic">Расскажите владельцу, что нашли объявление на eFlat. Возможно он подарит вам скидку.</p></span>
+					</div>
+					<div class="text-center">
+						<a href="">Показать все объявления (121)</a>
+						<button class="btn btn-default show-owner-info"><span class="show">Показать контакты</span><span class="hide">Скрыть контакты</span></button>
+					</div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="block small-margin mini-tech-info">
+			<span><strong>Кол-во спальных мест:</strong>5</span><span><strong>Максимальное кол-во гостей:</strong>20</span><span><strong>Этаж:</strong>9</span><span><strong>Площадь:</strong>45 кв.м</span>
+		</div>
+		
+		<!-- Info tabs -->
+		<div class="block small-margin row">
+			<div class="col-lg-8 col-md-8 tech-info-tabs">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+				  <li class="active"><a href="#description" data-toggle="tab">Описание</a></li>
+				  <li><a href="#comfort" data-toggle="tab">Удобства</a></li>
+				  <li><a href="#rent_terms_conditions" data-toggle="tab">Условия сдачи</a></li>
+				  <li><a href="#reviews" data-toggle="tab">Отзывы</a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="description">
+						<div class="panel panel-default comforts-panel col-sm-4 col-xs-12">
+							<div class="panel-body">
+								<h5 class="text-center">Особенности</h5>
+								<ul class="comforts-list list-unstyled">
+									<li class="enabled"><i></i>Парковка</li>
+									<li class="enabled"><i></i>Стиральная машина</li>
+									<li class="enabled"><i></i>Холодильник</li>
+									<li class="enabled"><i></i>Интернет <span class="grey">Wi Fi</span></li>
+								</ul>
+							</div>
+						</div>
+						<h5>Мебель и другие удобства:</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae iaculis nulla, sit amet sagittis nunc. Maecenas vulputate in nisl sit amet tempor. Donec eu ligula ut sem adipiscing ullamcorper et eu orci. Vivamus pharetra, mauris quis adipiscing auctor, lectus neque congue enim, in consequat odio sapien non ipsum. Nam gravida varius mi ut fringilla. Maecenas non porttitor nibh. Nam consequat erat nunc, sit amet ultricies odio scelerisque eget. Sed facilisis id erat eget facilisis. Suspendisse luctus porta consequat. Suspendisse facilisis, magna et pellentesque feugiat, metus augue pretium neque, a posuere felis enim eu risus. Sed interdum pellentesque mi, vitae egestas nunc sollicitudin nec. Duis aliquet euismod est sed dignissim. Etiam pellentesque sodales vulputate. Suspendisse congue dolor vel vehicula convallis. Mauris purus dui, ultricies at varius id, egestas ut nisl. Mauris dapibus ligula mauris, et tempor diam tristique vitae.</p>
+						<h5>Инфраструктура:</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae iaculis nulla, sit amet sagittis nunc. Maecenas vulputate in nisl sit amet tempor. Donec eu ligula ut sem adipiscing ullamcorper et eu orci. Vivamus pharetra, mauris quis adipiscing auctor, lectus neque congue enim, in consequat odio sapien non ipsum. Nam gravida varius mi ut fringilla. Maecenas non porttitor nibh. Nam consequat erat nunc, sit amet ultricies odio scelerisque eget. Sed facilisis id erat eget facilisis. Suspendisse luctus porta consequat. Suspendisse facilisis, magna et pellentesque feugiat, metus augue pretium neque, a posuere felis enim eu risus. Sed interdum pellentesque mi, vitae egestas nunc sollicitudin nec. Duis aliquet euismod est sed dignissim. Etiam pellentesque sodales vulputate. Suspendisse congue dolor vel vehicula convallis. Mauris purus dui, ultricies at varius id, egestas ut nisl. Mauris dapibus ligula mauris, et tempor diam tristique vitae.</p>
+						<h5>Дополнительная информация:</h5>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae iaculis nulla, sit amet sagittis nunc. Maecenas vulputate in nisl sit amet tempor. Donec eu ligula ut sem adipiscing ullamcorper et eu orci. Vivamus pharetra, mauris quis adipiscing auctor, lectus neque congue enim, in consequat odio sapien non ipsum. Nam gravida varius mi ut fringilla. Maecenas non porttitor nibh. Nam consequat erat nunc, sit amet ultricies odio scelerisque eget. Sed facilisis id erat eget facilisis. Suspendisse luctus porta consequat. Suspendisse facilisis, magna et pellentesque feugiat, metus augue pretium neque, a posuere felis enim eu risus. Sed interdum pellentesque mi, vitae egestas nunc sollicitudin nec. Duis aliquet euismod est sed dignissim. Etiam pellentesque sodales vulputate. Suspendisse congue dolor vel vehicula convallis. Mauris purus dui, ultricies at varius id, egestas ut nisl. Mauris dapibus ligula mauris, et tempor diam tristique vitae.</p>
+					</div>
+				  
+					<div class="tab-pane" id="comfort">
+						<ul class="comforts-list list-unstyled">
+							<li class="disabled"><i></i> Кондиционер</li>
+							<li class="enabled"><i></i> Парковка</li>
+							<li class="enabled"><i></i> Стиральная машина<span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Полуавтомат"></span></li>
+							<li class="disabled"><i></i> Курение в помещении</li>
+							<li class="enabled"><i></i> Холодильник</li>
+							<li class="disabled"><i></i> Питомцы<span class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement="top" title="Не больше 20 кг"></span></li>
+							<li class="enabled"><i></i> Интернет <small class="grey">Wi Fi</small></li>
+							<li class="disabled"><i></i> Кондиционер</li>
+							<li class="enabled"><i></i> Парковка</li>
+							<li class="enabled"><i></i> Стиральная машина</li>
+							<li class="disabled"><i></i> Курение в помещении</li>
+							<li class="enabled"><i></i> Холодильник</li>
+							<li class="disabled"><i></i> Питомцы</li>
+							<li class="enabled"><i></i> Интернет <span class="grey">Wi Fi</span></li>
+						</ul>
+					</div>
+					
+					<div class="tab-pane" id="rent_terms_conditions">
+						<p>Nam quis nulla varius libero feugiat viverra. Aliquam pellentesque vulputate nulla, nec adipiscing augue iaculis ullamcorper. Nunc quis lacinia ipsum, at tincidunt felis. Donec fringilla, felis mollis commodo congue, nunc elit dignissim justo, vel mollis metus lectus ac enim. Maecenas et lacus a erat commodo dignissim id eu nibh. Sed sed urna vitae nibh accumsan consequat. Vivamus aliquam lobortis elit, sit amet posuere elit. Ut dolor urna, ultrices eu nibh sit amet, scelerisque viverra eros. Proin hendrerit dictum sodales. Etiam vulputate urna in est consectetur, ac cursus erat dapibus. Nulla facilisi.</p>
+						<p>Morbi lacinia fringilla feugiat. Morbi ac velit velit. Ut a suscipit ligula, a auctor quam. Nulla venenatis tempus ullamcorper. Sed quam dui, pretium nec ligula eget, venenatis bibendum metus. Sed venenatis lorem ut dolor pretium, ac pellentesque nibh euismod. Proin aliquam et velit nec pharetra. Ut fringilla hendrerit orci, vel ullamcorper sapien dictum eu. In fringilla augue ut lacinia dignissim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam mollis convallis diam, sed feugiat eros dictum sed. Nullam eget dui velit.</p>
+					</div>
+				  
+					<div class="tab-pane" id="reviews">
+						<div class="rating-block clearfix">
+							<div class="col-lg-3">
+								<div class="rating full">
+									<h5>Оценка гостей</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+							</div>
+								
+							<div class="col-lg-9">
+								<div class="rating half">
+									<h5>Соответствие описанию</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+								<div class="rating half">
+									<h5>Чистота</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+									</div>
+								</div>
+								<div class="rating half">
+									<h5>Заселение</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+								<div class="rating half">
+									<h5>Общение</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+								<div class="rating half">
+									<h5>Расположение</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+								<div class="rating half">
+									<h5>Цена/качество</h5>
+									<div class="stars">
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star"><span class="half-star"></span></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+										<span class="glyphicon glyphicon-star empty-star"></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="put-review">
+							<div class="text-center review-question"><span>Есть о чем рассказать другим о этой квартире?</span><button class="btn btn-default">Добавить отзыв</button></div>
+							<div class="rating-form">
+								<form role="form" id="reviewForm" class="clearfix">
+									<div class="form-group">
+										<h4>Поставьте объективную оценку качества жилья</h4>
+									</div>
+									<div class="form-group rating-block">
+										<div class="rating half">
+											<h5>Соответствие описанию</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt1" class="rating" />
+											</div>
+										</div>
+										<div class="rating half">
+											<h5>Чистота</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt2" class="rating" />
+											</div>
+										</div>
+										<div class="rating half">
+											<h5>Заселение</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt3" class="rating" />
+											</div>
+										</div>
+										<div class="rating half">
+											<h5>Общение</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt4" class="rating" />
+											</div>
+										</div>
+										<div class="rating half">
+											<h5>Расположение</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt5" class="rating" />
+											</div>
+										</div>
+										<div class="rating half">
+											<h5>Цена/качество</h5>
+											<div class="stars">
+												<input type="number" name="your_awesome_parameter"  data-max="5" id="ratingSt6" class="rating" />
+											</div>
+										</div>
+									</div>
+								  <div class="form-group">
+									<label for="textareaReviw">Ваш отзыв:</label>
+									<textarea class="form-control" rows="3" id="textareaReviw"></textarea>
+								  </div>
+								  <button type="submit" class="btn btn-primary pull-right">Добавить отзыв</button>
+								</form>
+							</div>
+						</div>
+						<ul class="reviews-list-item list-unstyled">
+							<li class="review-item row">
+								<div class="col-lg-2 col-md-2 col-xs-2 user-info text-center">
+									<a href="" class="link-to-user" alt="">
+										<img src="images/darth.jpg" class="img-responsive img-rounded" alt=""/>
+									</a>
+									<a href="" class="link-to-user" alt=""><span class="name">Сергей</span></a>
+								</div>
+								<div class="col-lg-10 col-md-10 col-xs-10">
+									<div class="well review">
+										<p>Должен поблагодарить Арнольда за прекрасное время, что мы провели в Киеве. Благодаря своему, очень удобному, расположению, нам удалось за короткий срок успеть посетить почти все намеченные цели. И архитектурные памятники, и главные галереи и самые яркие клубы, и даже самые толковые магазины - всё было в пешеходной досягаемости. Квартира удобная - две спальни расположены по разным концам от гостинной, что удобно для двух разных пар со своими режимами. Хороший диван в гостиной служил нам уютным полем для переговоров. Кухня и ванная включают в себя всё необходимое. Интернет работает быстро, кабельные каналы ТВ тоже радуют. Большой балкон с прекрасным видом - спасение для курящих. В общем - спасибо.</p>
+		
+										<div class="date text-muted">январь 2014</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="put-review">
+							<div class="text-center review-question"><span>Есть о чем рассказать другим о этой квартире?</span><button class="btn btn-default">Добавить отзыв</button></div>
+						</div>
+					</div>
+				</div>
+			
+			</div>
+			
+			<div class="col-lg-4 col-md-4 sub-info">
+			
+				<div class="same-items-block panel panel-default">
+				  <div class="panel-heading">Похожие объявления</div>
+				  <div class="panel-body panel-body-scroll">
+				  
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					<div class="row same-item">
+						<div class="col-sm-5"><a href=""><img src="images/apt_small.jpg" class="img-responsive" alt=""/></a></div>
+						<div class="col-sm-7 same-item-info">
+							<a href="" class="distance-link">ул.Артема 74а</a>
+							<div class="same-item-price">От <strong>450 грн</strong> за сутки</div>
+							<div class="text-italic">Площадь 54м</div>
+							<div class="text-italic">Спальных мест 20</div>
+						</div>
+					</div>
+					
+				  
+				  </div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer" role="footer">
+		<div class="container clearfix">
+			<div class="row">
+				<div class="col-lg-10 col-md-9 col-sm-7"><div class="row">
+					<nav class="info-menu col-lg-6 col-md-6 col-sm-12 pull-left">
+						<ul class="info-menu-list list-unstyled">
+							<li><a href="#contact">Контакты</a></li>
+							<li><a href="#delivery">Оплата заказа</a></li>
+							<li><a href="#payment">Пользовательское соглашение</a></li>
+							<li><a href="#service">Гарантия и Сервис</a></li>
+							<li><a href="#stock">Акции</a></li>
+							<li><a href="#credit">Вопросы и ответы</a></li>
+							<li><a href="#credit">Служба поддержки</a></li>
+						</ul>
+					</nav>
+					<div class="subscribe col-lg-6 col-md-6 col-sm-12 pull-left">Подпишитесь на рассылку эксклюзивных предложений 
+						<form class="form-inline" role="form">
+							<input type="email" class="form-control" placeholder="Ваш e-mail"/>
+							<button class="btn btn-primary">Подпишись!</button>
+						</form>
+					</div>
+				</div></div>
+				<div class="social-box col-lg-2 col-md-3 col-sm-5 pull-right">
+					<span>Присоединяйся к нам!</span>
+					<ul class="social-list list-unstyled list-inline">
+						<li>
+							<a href="" class="vk"></a>
+						</li>
+						<li>
+							<a href="" class="fb"></a>
+						</li>
+						<li>
+							<a href="" class="tw"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright_text small">Copyright © 2014 eFlat.com. Все права защищены.</div>
+		</div>
+	</footer>
+	
+	<!-- MODALS -->
+	<div class="modal fade" id="booking" tabindex="-1" role="dialog" aria-labelledby="ModalBooking" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Забронировать квартиру online</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form" id="bookingForm" class="form-horizontal clearfix">
+					  <div class="form-group">
+						<div class="col-sm-12 booking-total"><strong>Общая стоимость аренды:</strong> <span>1500 грн</span></div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputName" class="col-sm-4 control-label">*Ваше имя</label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="inputName" placeholder="Виктор Янукович" required>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputPhone" class="col-sm-4 control-label">*Ваш номер телефона:</label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="inputPhone" placeholder="123 45 67 890">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="inputEmail" class="col-sm-4 control-label">*Ваш email:</label>
+						<div class="col-sm-8">
+						  <input type="text" class="form-control" id="inputEmail" placeholder="dog@life.net">
+						</div>
+					  </div>
+					  <div class="form-group">
+						<label for="textareaComment" class="col-sm-5 control-label text-left">Cообщение арендодателю:</label>
+						<div class="col-sm-12">
+						  <textarea class="form-control" id="textareaComment" rows="3"></textarea>
+						</div>
+					  </div>
+					  <div class="form-group">
+						<div class="col-sm-10">
+						  <div class="checkbox">
+							<label>
+							  <input type="checkbox"> Я принимаю пользовательское соглашение
+							</label>
+						  </div>
+						</div>
+					  </div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" for="bookingForm" class="btn btn-primary" data-dismiss="modal" aria-hidden="true" data-toggle="modal" data-target="#bookingStepTwo">Бронировать</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	<div class="modal fade" id="bookingStepTwo" tabindex="-1" role="dialog" aria-labelledby="ModalBookingStepTwo" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Забронировать квартиру online</h4>
+				</div>
+				<div class="modal-body">
+					<form role="form" id="bookingForm2" class="form-horizontal clearfix">
+						<p>Поздравляем, Ваш запрос на бронирование квартиры по ул.Верховная Рада 1 с 19.02.2014 до 23.02.2014 успешно принят в работу. Стоимость аренды за весь период на 3х гостей составляет 1500 грн. Предоплата 700 грн.</p>
+						<p>Владелец квартиры свяжется с вами в ближайшее время для подтверждения брони.</p>
+						<p>Для управления бронированием вы можете использовать силый майдана, созданные при революции...</p>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<a href="#" class="decor-link pull-left" data-dismiss="modal" aria-hidden="true" data-toggle="modal" data-target="#booking">Изменить параметры брони</a>
+					<button type="button" for="bookingForm2" class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Принять</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+</body>
+</html>

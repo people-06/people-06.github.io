@@ -1,0 +1,23 @@
+.add-flat-form {
+  float: none;
+  margin: 0 auto;
+}
+.add-flat-form .add-flat-item {
+  width: 100%;
+}
+.add-flat-form .add-flat-body {
+  margin-top: 30px;
+}
+.add-flat-form .control-label {
+  text-align: left;
+}
+.add-flat-form .control-label.col-sm-12 + .col-sm-12 {
+  margin-top: 10px;
+}
+.add-flat-form .add-comfort input[type="checkbox"] {
+  vertical-align: text-top;
+}
+.add-flat-form .add-comfort .control-label {
+  font-weight: 400;
+  cursor: pointer;
+}

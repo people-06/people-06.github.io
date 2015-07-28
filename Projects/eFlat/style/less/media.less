@@ -1,0 +1,209 @@
+@media (min-width: @screen-sm-min) {
+	.banner .index-filter {
+		margin-top: 300px;
+	}
+	
+	.filter {
+		white-space: nowrap;
+		word-spacing: -4px;
+		
+		input.form-control, 
+		select.form-control {
+			display: block;
+			width: 100%;
+			height: 40px;
+		}
+		
+		.long {
+			width: 40%;
+			margin-right: 0.5%;
+		}
+		.short {
+			width: 16%;
+			margin-right: 0.5%;
+		}
+		.btn{
+			width: 10%;
+			height: 40px;
+		}
+		
+		.select {
+			height: 40px;
+			line-height: 26px;
+		}
+	}
+}
+
+
+@media (min-width: 992px) {
+	.footer .form-inline input { width: auto; }
+}
+
+@media (max-width: @screen-sm-max) {
+	body {
+		padding-bottom: 0;
+	}
+	
+	.footer {
+		position: static;
+	}
+	
+	.navbar .navbar-form.navbar-right {
+		width: 20%;
+		
+		.btn {
+			right: 5px;
+		}
+	}
+	
+	.media-info,.main-info,.tech-info-tabs,.sub-info{
+		padding: 0;
+	}
+
+	.booking-form {
+		text-align: center;
+		
+		.price, .for-period {
+			float: none;
+			.inline-block-mid();
+		}
+		
+		.form-group{
+			.inline-block-mid();
+			margin-bottom: 0;
+		}
+		
+		.approximate-price,.btn {
+			width: 48%;
+			.inline-block-mid();
+		}
+		
+	}
+	.form-control {
+		padding: 6px 5px;
+		+ .glyphicon {
+			font-size: 14px;
+			right: 4px;
+			line-height: 38px;
+		}
+	}
+ }
+@media (max-width: @screen-xs-max) { 
+
+	.banner .index-filter {
+		margin-top: 100px;
+	}
+	
+	body {
+		padding-bottom: 280px;
+	}
+	
+	.navbar {
+	
+		.navbar-nav {
+			text-align: center;
+		}
+		.navbar-form.navbar-right {
+			margin: 20px auto;
+			width: 80%;
+		}
+	}
+	
+	.filter {
+		.form-group {
+			margin-bottom: 10px;
+		}
+		.form-inline {
+			white-space: nowrap;
+		}
+		.long input{
+			text-align: center;
+		}
+		.short {
+			width: 32%;
+			.inline-block-top();
+			margin-right: 1.3%;
+			&.last {
+				margin-right: 0;
+			}
+		}
+		.btn {
+			display: block;
+			margin: 0 auto;
+			width: 32%;
+			
+			&.affix {
+				width: auto;
+				right: 20px;
+			}
+		}
+		.secon-filter {
+			white-space: normal;
+			text-align: justify;
+			
+			> div {
+				width: 32%;
+				margin: 5px 0;
+			}
+		}
+		.second-filter.affix .no-delete {
+			margin-right: 10%;
+		}
+	}
+	
+	.comforts-panel .comforts-list li {
+		display: inline-block;
+		width: 49%;
+	}
+	
+	.mini-tech-info {
+		> span {
+			width: 45%;
+			white-space: nowrap;
+			padding: 8px 5px;
+		}
+		> span:nth-child(even) {
+			width: 55%;
+		}
+	}
+	
+		
+	.booking-form {
+		.approximate-price,.btn {
+			width: 100%;
+			display: block;
+		}
+	}
+
+ }
+ 
+@media (max-width: 580px) {
+	.nav-tabs{ 
+		> li {
+			float: none;
+			.inline-block-top();
+			width: 49%;
+			margin-bottom: 5px;
+		}
+	}
+}
+ 
+@media (max-width: 480px) {
+	.comforts-panel .comforts-list li {
+		display: block;
+		width: auto;
+	}
+	
+	.search-results .search-item {
+		width: 100%;
+	}
+	
+	
+	.mini-tech-info {
+		> span {
+			display: block;
+			width: 100% !important;
+			padding: 10px 15px;
+		}
+	}
+} 

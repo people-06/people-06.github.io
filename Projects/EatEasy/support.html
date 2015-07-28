@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>EatEasy</title>
+    </head>
+    <body class="support-page">
+        <header>
+			<span class="menu-toggle"></span>
+			<a href="#" class="logo-link">
+				<img src="img/eateasy-logo.png" alt="EatEasy Logo"/>
+			</a>
+			<form action="/search" class="search">
+				<button class="search-btn"></button>
+			</form>
+		</header>
+		
+		<div class="map-box"></div>
+		
+		<section>			
+			<div class="content">
+				<form action="" class="support-msg">
+					<h2>тема сообщения:</h2>
+					<input type="text" name="theme" value="точность GPS"/>
+					<h2>тема сообщения:</h2>
+					<textarea>Добрый день! При определении моего местоположения очень большая погрешность(обрый день! При определении моего местоположения очень большая погрешность(</textarea>
+					<button class="link-btn">Отправить</button>
+				</form>
+			</div>
+		</section>
+		
+		<footer>
+			<div class="basket">
+				<a href="/cart" class="basket-link"></a>
+			</div>
+		</footer>
+		
+        <script type="text/javascript" src="js/cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

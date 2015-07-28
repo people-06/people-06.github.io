@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title here -->
+	<title>eFlat</title>
+	<meta charset="utf-8"/>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="eFlat">
+	<meta name="keywords" content="eFlat">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Styles -->
+	<link href="style/css/style.css" rel="stylesheet">
+	<!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- scripts TeST -->
+    	<link href="js/css/css_for_js.css" rel="stylesheet">
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/jquery-ui-1.10.4.custom.min.js"></script><!--datepicker-->
+    	<script src="js/jquery.cycle2.min.js"></script>
+		<script src="js/jquery.cycle2.carousel.min.js"></script>
+		<script src="js/jquery.custom-scrollbar.min.js"></script>
+		<script src="js/bootstrap-rating-input.js"></script>
+    	<script src="js/scripts.js"></script>
+    <!-- end scripts TeST -->
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+</head>
+<body>
+
+	<header class="navbar" role="banner">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="../" class="navbar-brand">eFlat</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+				  <a href="#">Регистрация</a>
+				</li>
+				<li>
+				  <a href="#" rel="login">Войти</a>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Помощь<b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Перейти в раздел FAQ</a></li>
+					<li class="divider"></li>
+					<li><a href="#">С чего начать</a></li>
+					<li><a href="#">Как создать аккаунт?</a></li>
+					<li><a href="#">Как сдать жилье</a></li>
+				  </ul>
+				</li>
+				
+				<li>
+				  <a class="btn btn-primary" href="#">Сдайте свое жилье</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<input type="text" class="form-control" placeholder="Поиск">
+				<button type="submit" class="btn glyphicon glyphicon-search"></button>
+			</form>
+		</nav>
+	  </div>
+	</header>	
+	
+	<div class="container page-body">
+		<div class="block">
+			<h1 class="main-header text-center">Добавить квартиру</h1>
+			<div class="add-flat-wrap">
+				
+				<form class="form-horizontal add-flat-form col-sm-10" role="form">
+					<div class="add-flat-list cycle-slideshow clearfix" data-cycle-fx="scrollHorz"
+													 data-cycle-carousel-fluid="true "
+													 data-cycle-timeout="0" 
+													 data-cycle-next=".next"
+													 data-cycle-pager=".cycle-pager-custom"
+													 data-cycle-pager-template="<span>{{slideNum}}</span>"
+													 data-cycle-slides=".add-flat-item">
+							
+													 
+							<div class="add-flat-item">
+								<div class="add-flat-title">
+									<h2>Шаг 1: Общая информация о квартире</h2>
+									<p>Для добавления квартиры надо пройти 4 не сложных шага....</p>
+								</div>
+								
+								<!-- empty element for pager links -->
+								<div class="cycle-pager-custom top"></div>
+								
+								<div class="add-flat-body clearfix">
+										<div class="col-sm-7">
+										  <div class="form-group">
+											<label for="AddFlatAddress" class="col-sm-3 control-label">Адрес</label>
+											<div class="col-sm-9">
+											  <input type="text" class="form-control" id="AddFlatAddress">
+											</div>
+										  </div>
+										  <div class="form-group">
+											<label for="AddFlatDescShort" class="col-sm-12 control-label">Краткое описание</label>
+											<div class="col-sm-12">
+											  <textarea class="form-control" id="AddFlatDescShort" rows="6"></textarea>
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-5">
+											<div class="form-group">
+												<label for="AddFlatType" class="col-sm-5 control-label">Тип объекта</label>
+												<div class="col-sm-7">
+													<select class="form-control" id="AddFlatType">
+													  <option>Комната</option>
+													  <option>Квартира</option>
+													  <option>Дом</option>
+													  <option>Дача</option>
+													</select>
+												</div>
+											</div>
+										  <div class="form-group">
+											<label for="AddFlatRooms" class="col-sm-5 control-label">Комнат</label>
+											<div class="col-sm-4">
+											  <input type="text" class="form-control" id="AddFlatRooms">
+											</div>
+										  </div>
+										  <div class="form-group">
+											<label for="AddFlatRooms" class="col-sm-5 control-label">Спальных мест</label>
+											<div class="col-sm-4">
+											  <input type="text" class="form-control" id="AddFlatRooms">
+											</div>
+										  </div>
+										  <div class="form-group">
+											<label for="AddFlatRooms" class="col-sm-5 control-label">Площадь</label>
+											<div class="col-sm-4">
+											  <input type="text" class="form-control" id="AddFlatRooms">
+											</div>
+											<div class="pull-left control-label">
+											  м
+											</div>
+										  </div>
+										  <div class="form-group">
+											<label for="AddFlatRooms" class="col-sm-5 control-label">Этаж</label>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatRooms">
+											</div>
+											<div class="pull-left control-label">
+											  из
+											</div>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatRooms">
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-12">
+											<div class="form-group">
+												<label for="AddFlatDesc" class="col-sm-12 control-label">Полное описание</label>
+												<div class="col-sm-12">
+												<textarea class="form-control" id="AddFlatDesc" rows="8"></textarea>
+												</div>
+											</div>
+										</div>
+										<div class="col-sm-12 text-right">
+											<span class="next btn btn-primary">Дальше</span>
+										</div>
+								</div>
+							</div>
+						
+							<div class="add-flat-item">
+								<div class="add-flat-title">
+									<h2>Шаг 2: Удобства и особенности</h2>
+									<p>Для добавления квартиры надо пройти 4 не сложных шага. Здесь текст о важности указанных удобствах</p>
+								</div>
+								
+								<!-- empty element for pager links -->
+								<div class="cycle-pager-custom top"></div>
+								
+								<div class="add-flat-body clearfix">
+									<div class="col-sm-12">
+										<ul class="add-comfort list-unstyled clearfix">
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Кондиционер</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Парковка</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Стиральная машина</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Курение в помещении</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Холодильник</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Питомцы</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Интернет</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Кондиционер</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Парковка</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Стиральная машина</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Курение в помещении</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Холодильник</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Питомцы</label></li>
+											<li class="col-sm-4"><label class="control-label"><input type="checkbox"> Интернет <small>Wi-Fi</small></label></li>
+										</ul>
+									</div>
+									
+									<div class="col-sm-12 text-right">
+										<span class="next btn btn-primary">Дальше</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="add-flat-item">
+								<div class="add-flat-title">
+									<h2>Шаг 3: Тарифная политика и условия оренды</h2>
+									<p>Для добавления квартиры надо пройти 4 не сложных шага....</p>
+								</div>
+								
+								<!-- empty element for pager links -->
+								<div class="cycle-pager-custom top"></div>
+								
+								<div class="add-flat-body clearfix">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="AddFlatMinRent" class="col-sm-7 control-label">Минимальный срок аренды</label>
+											<div class="col-md-4 col-xs-5">
+												<select class="form-control" id="AddFlatMinRent">
+												  <option>1 день</option>
+												  <option>3 дня</option>
+												  <option>5 дней</option>
+												  <option>неделя</option>
+												  <option>месяц</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="AddFlatTimeIn" class="col-sm-7 control-label">Время заселения</label>
+											<div class="col-md-4 col-xs-5">
+												<select class="form-control" id="AddFlatTimeIn">
+													<option>14:00</option>
+													<option>15:00</option>
+													<option>16:00</option>
+													<option>17:00</option>
+													<option>18:00</option>
+													<option>19:00</option>
+													<option>20:00</option>
+													<option>21:00</option>
+													<option>22:00</option>
+													<option>23:00</option>
+													<option>00:00</option>
+													<option>01:00</option>
+													<option>02:00</option>
+													<option>03:00</option>
+													<option>04:00</option>
+													<option>05:00</option>
+													<option>06:00</option>
+													<option>07:00</option>
+													<option>08:00</option>
+													<option>09:00</option>
+													<option>10:00</option>
+													<option>11:00</option>
+													<option>12:00</option>
+													<option>13:00</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="AddFlatTimeOut" class="col-sm-7 control-label">Время выселения</label>
+											<div class="col-md-4 col-xs-5">
+												<select class="form-control" id="AddFlatTimeOut">
+													<option>12:00</option>
+													<option>13:00</option>
+													<option>14:00</option>
+													<option>15:00</option>
+													<option>16:00</option>
+													<option>17:00</option>
+													<option>18:00</option>
+													<option>19:00</option>
+													<option>20:00</option>
+													<option>21:00</option>
+													<option>22:00</option>
+													<option>23:00</option>
+													<option>00:00</option>
+													<option>01:00</option>
+													<option>02:00</option>
+													<option>03:00</option>
+													<option>04:00</option>
+													<option>05:00</option>
+													<option>06:00</option>
+													<option>07:00</option>
+													<option>08:00</option>
+													<option>09:00</option>
+													<option>10:00</option>
+													<option>11:00</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+										<label for="AddFlatDop" class="col-sm-7 control-label">Доплата за ранее заселение или выселение</label>
+										<div class="col-md-3 col-xs-4">
+										  <input type="text" class="form-control" id="AddFlatDop">
+										</div>
+										<div class="pull-left control-label">
+										  грн
+										</div>
+									  </div>
+									</div>
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label for="AddFlatDailyPrice" class="col-sm-7 control-label">Стоимость суток аренды</label>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatDailyPrice">
+											</div>
+											<div class="pull-left control-label">
+											  грн
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="AddFlatWeekendPrice" class="col-sm-7 control-label">Тариф выходного дня</label>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatWeekendPrice">
+											</div>
+											<div class="pull-left control-label">
+											  грн
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="AddFlatPrepay" class="col-sm-7 control-label">Предоплата</label>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatPrepay">
+											</div>
+											<div class="pull-left control-label">
+											  грн
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12">
+										<div class="form-group">
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Залог</label>
+											</div>
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Необходимо наличие паспорта</label>
+											</div>
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Предоставляются отчетные документы</label>
+											</div>
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Возможность безналичного расчета</label>
+											</div>
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Возможность оплаты наличными</label>
+											</div>
+											<div class="col-sm-6">
+												<label class="control-label"><input type="checkbox"> Возможность оплаты картой</label>
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-12 text-right">
+										<span class="next btn btn-primary">Дальше</span>
+									</div>
+								</div>
+							</div>
+							
+							<div class="add-flat-item">
+								<div class="add-flat-title">
+									<h2>Шаг 4: Контакты</h2>
+									<p>Для добавления квартиры надо пройти 4 не сложных шага....</p>
+									<p>Для добавления квартиры надо пройти 4 не сложных шага....</p>
+								</div>
+								
+								<!-- empty element for pager links -->
+								<div class="cycle-pager-custom top"></div>
+								
+								<div class="add-flat-body clearfix">
+										<div class="col-sm-6">
+										  <div class="form-group">
+											<label for="AddFlatOwnerName" class="col-sm-4 control-label">Ваше имя</label>
+											<div class="col-sm-8">
+											  <input type="text" class="form-control" id="AddFlatOwnerName">
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-6">
+										  <div class="form-group">
+											<label for="AddFlatOwnerName2" class="col-sm-4 control-label">Фамилия</label>
+											<div class="col-sm-8">
+											  <input type="text" class="form-control" id="AddFlatOwnerName2" placeholder="не обязательно">
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-6">
+										  <div class="form-group has-error">
+											<label for="AddFlatOwnerEmail" class="col-sm-4 control-label">Email</label>
+											<div class="col-sm-8">
+											  <input type="text" class="form-control error" id="AddFlatOwnerEmail">
+											  <small class="text-error help-block">Ошибка валидации. Введите e-mail</small>
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-6">
+										  <div class="form-group">
+											<label for="AddFlatOwnerPhone" class="col-sm-4 control-label">Номер телефона</label>
+											<div class="col-sm-2 control-label text-right phone-plus">+3 8</div>
+											<div class="col-sm-6">
+												<input type="text" class="form-control" id="AddFlatOwnerPhone">
+											</div>
+											<small class="col-sm-12 help-block">На указаный номер телефона прийдет SMS с паролем для входа на сайт</small>
+										  </div>
+										</div>
+										<h5 class="col-sm-12">Дополнительные контакты</h5>
+										<div class="col-sm-12">
+										  <div class="form-group">
+											<label for="AddFlatOwnerPhone2" class="col-sm-2 control-label">Номер телефона</label>
+											<div class="col-sm-1 control-label phone-plus">+3 8</div>
+											<div class="col-sm-3">
+												<input type="text" class="form-control" id="AddFlatOwnerPhone2">
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-12">
+										  <div class="form-group">
+											<label for="AddFlatOwnerSkype" class="col-sm-3 control-label">Skype</label>
+											<div class="col-sm-3">
+											  <input type="text" class="form-control" id="AddFlatOwnerSkype">
+											</div>
+										  </div>
+										</div>
+										<div class="col-sm-12">
+											<label class="control-label"><input type="checkbox"> <a href="#" class="decor-link">Я принимаю пользовательское соглашение</a></label>
+										</div>
+										<div class="col-sm-12 text-right">
+											<a href="#" class="have-account decor-link">Уже есть аккаунт?</a><span class="btn btn-primary"  data-toggle="modal" data-target="#AddFlatSuccess">Добавить квартиру</span>
+										</div>
+								</div>
+							</div>
+							
+							<!-- empty element for pager links -->
+							<div class="cycle-pager-custom"></div>
+						
+					</div>
+				</form>
+			</div>
+			
+			
+		
+		</div>
+	</div>
+	
+	<footer class="footer" role="footer">
+		<div class="container clearfix">
+			<div class="row">
+				<div class="col-lg-10 col-md-9 col-sm-7"><div class="row">
+					<nav class="info-menu col-lg-6 col-md-6 col-sm-12 pull-left">
+						<ul class="info-menu-list list-unstyled">
+							<li><a href="#contact">Контакты</a></li>
+							<li><a href="#delivery">Оплата заказа</a></li>
+							<li><a href="#payment">Пользовательское соглашение</a></li>
+							<li><a href="#service">Гарантия и Сервис</a></li>
+							<li><a href="#stock">Акции</a></li>
+							<li><a href="#credit">Вопросы и ответы</a></li>
+							<li><a href="#credit">Служба поддержки</a></li>
+						</ul>
+					</nav>
+					<div class="subscribe col-lg-6 col-md-6 col-sm-12 pull-left">Подпишитесь на рассылку эксклюзивных предложений 
+						<form class="form-inline" role="form">
+							<input type="email" class="form-control" placeholder="Ваш e-mail"/>
+							<button class="btn btn-primary">Подпишись!</button>
+						</form>
+					</div>
+				</div></div>
+				<div class="social-box col-lg-2 col-md-3 col-sm-5 pull-right">
+					<span>Присоединяйся к нам!</span>
+					<ul class="social-list list-unstyled list-inline">
+						<li>
+							<a href="" class="vk"></a>
+						</li>
+						<li>
+							<a href="" class="fb"></a>
+						</li>
+						<li>
+							<a href="" class="tw"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright_text small">Copyright © 2014 eFlat.com. Все права защищены.</div>
+		</div>
+	</footer>
+
+<div class="modal fade" id="AddFlatSuccess">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Заявка отправлена</h4>
+      </div>
+      <div class="modal-body">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Войти в ЛК</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+	
+	</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title here -->
+	<title>eFlat</title>
+	<meta charset="utf-8"/>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="eFlat">
+	<meta name="keywords" content="eFlat">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Styles -->
+	<link href="style/css/style.css" rel="stylesheet">
+	<!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- scripts TeST -->
+     	<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+    	<link href="js/css/css_for_js.css" rel="stylesheet">
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/jquery-ui-1.10.4.custom.min.js"></script><!--datepicker-->
+    	<script src="js/scripts.js"></script>
+    <!-- end scripts TeST -->
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+</head>
+<body  class="about-page">
+
+	<header class="navbar" role="banner">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="../" class="navbar-brand">eFlat</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+				  <a href="#">Регистрация</a>
+				</li>
+				<li>
+				  <a href="#" rel="login">Войти</a>
+				</li>
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Помощь<b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Перейти в раздел FAQ</a></li>
+					<li class="divider"></li>
+					<li><a href="#">С чего начать</a></li>
+					<li><a href="#">Как создать аккаунт?</a></li>
+					<li><a href="#">Как сдать жилье</a></li>
+				  </ul>
+				</li>
+				
+				<li>
+				  <a class="btn btn-primary" href="#">Сдайте свое жилье</a>
+				</li>
+			</ul>
+			<form class="navbar-form navbar-right" role="search">
+				<input type="text" class="form-control" placeholder="Поиск">
+				<button type="submit" class="btn glyphicon glyphicon-search"></button>
+			</form>
+		</nav>
+	  </div>
+	</header>
+	
+	<div id="indexFilter" class="index-filter filter">
+		<div class="container">
+			<form class="form-inline" role="form">
+			  <div class="form-group long">
+				<input type="text" class="form-control" id="citySearch" placeholder="Куда Вы направляетесь?"><span class="glyphicon glyphicon-globe"></span>
+			  </div>
+			  
+			  <div class="form-group short">
+				<input type="text" class="form-control" id="startDate" placeholder="Заезд"><span class="glyphicon glyphicon-calendar d-start"></span>
+			  </div>
+			  
+			  <div class="form-group short">
+				<input type="text" class="form-control" id="endDate" placeholder="Отъезд"><span class="glyphicon glyphicon-calendar d-end"></span>
+			  </div>
+			  
+			  <div class="form-group short">
+				<select class="form-control">
+				  <option>1 гость</option>
+				  <option>2 гостя</option>
+				  <option>3 гостя</option>
+				  <option>4 гостя</option>
+				  <option>5 гостя</option>
+				</select>
+			  </div>
+			  <button type="submit" class="btn btn-primary">Найти</button>
+			</form>
+		</div>
+	</div>
+	
+	
+	<div class="container page-body">
+		<div class="block clearfix about-page">
+			<h2>Помощь дорогому клиенту</h2>
+			<div class="col-lg-3 col-md-3 col-sm-4 fixed-left-menu">
+				<ul class="nav nav-pills nav-stacked anchor-menu" data-spy="affix" data-offset-top="150">
+					<li class="active"><a href="#top">Контакты </a></li>
+					<li class=""><a href="#delivery">Доставка товара </a></li>
+					<li class=""><a href="#payment">Оплата товара </a></li>
+					<li class=""><a href="#service">Гарантия и Сервис </a></li>
+					<li class=""><a href="#stock">Акции </a></li>
+					<li class=""><a href="#credit">Кредиты</a></li>
+				</ul>
+			</div>
+			<div class="col-lg-9 col-md-9 col-sm-8 about-right">
+
+				<section class="about-block">
+					<h3 class="anchor" id="contact">Наши контакты</h3>
+
+					<p><strong>Телефон:</strong> (096) 766 66 46<br>
+					<strong>Email:</strong> office@mobimall.com.ua<br>
+					<strong>Skype:</strong> mobimall.com.ua<br>
+					<strong>Адрес:</strong> Украина, г.Киев</p>
+
+					<h5>Адрес магазина</h5>
+
+					<p>Одна из причин, почему люди выбирают нас, как интернет-магазин - это приемлемые цены, которые мы добиваемся за счет сокращения внутренних расходов.</p>
+
+					<p><strong>Поэтому мы не тратим на офис ~3 000 у.е. (офис / мебель / персонал) в Киеве, а потом вкладываем ежемесячные затраты в цену товара, который вы покупаете у нас. Если у вас возникают из-за этого какие-то вопросы, вы всегда можете позвонить и задать их нам по телефону <u>(096) 766 66 46</u></strong></p>
+
+					<div class="sidebar-item opening-time" id="opening_time-4">
+					<div class="underlined">
+					<h5>Время работы магазина</h5>
+					</div>
+
+					<div class="time-table">
+					<dl class="week-day">
+						<dt>Понедельник</dt>
+						<dd>9:00 - 20:00</dd>
+					</dl>
+
+					<dl class="week-day light-bg">
+						<dt>Вторник</dt>
+						<dd><span style="font-size: 13px;">9:00 - 20</span><span style="font-size: 13px;">:00</span></dd>
+					</dl>
+
+					<dl class="week-day">
+						<dt>Среда</dt>
+						<dd><span style="font-size: 13px;">9:00 - 20</span><span style="font-size: 13px;">:00</span></dd>
+					</dl>
+
+					<dl class="week-day light-bg today">
+						<dt>Четверг</dt>
+						<dd><span style="font-size: 13px;">9:00 - 20</span><span style="font-size: 13px;">:00</span></dd>
+					</dl>
+
+					<dl class="week-day">
+						<dt>Пятница</dt>
+						<dd><span style="font-size: 13px;">9:00 - 20</span><span style="font-size: 13px;">:00</span></dd>
+					</dl>
+
+					<dl class="week-day light-bg">
+						<dt>Суббота</dt>
+						<dd>10:00 - 18:00</dd>
+					</dl>
+
+					<dl class="week-day closed">
+						<dt>Воскресенье</dt>
+						<dd>10:00 - 18:00</dd>
+					</dl>
+					</div>
+					</div>
+				</section>
+
+
+				<section class="about-block">
+					<h3 class="anchor"  id="delivery">Доставка товара</h3>
+					
+					<h5>Курьером по Киеву</h5>
+
+					<p>Данный способ оплаты доступен только по Киеву. Вы оплачиваете товар, после того, как получите товар от нашего курьера. Стоимость доставки 35 грн, при заказе <b>от 4 000 грн доставка Бесплатная</b></p>
+
+					<p>В большинстве случаев товар может быть доставлен на следующий, после дня заказа, день. В отдельных случаях (в зависимости от времени, заказа, наличия товара на складе и загруженности службы доставки) может быть осуществлена доставка день-в-день или если товар находиться на удаленном складе в срок от 2 до 5-и дней. В любом случае срок доставки озвучивается менеджером контакт центра при подтверждении заказа.</p>
+
+					<h5>Новой почтой по Украине</h5>
+
+					<p>Доставка осуществляется по тарифам Новой Почты (<a href="http://novaposhta.ua/frontend/calculator/ua" rel="nofollow" target="_blank">Калькулятор</a>).</p>
+
+					<p>В большинстве случаев товар может быть отправлен на следующий после заказа день. Время доставки до двери в Вашем городе зависит от графика выбранной службы доставок. В ряде случаев (если товар находиться на удаленном складе) товар может быть отгружен в срок от 2-х до 5-и дней. В любом случае срок доставки озвучивается менеджером контакт центра при подтверждении заказа.</p>
+
+					<h5>Другие службы доставки Украина</h5>
+
+					<p>Вы можете попросить воспользоваться другой службой доставки, кроме Новой почты. Это оговаривается с менеджером контак-центра</p>
+					</section>
+
+
+					<div class="underlined push-down-20" id="payment">
+					<h3>Оплата товара</h3>
+					</div>
+					
+
+					<section class="about-block">
+					<h5>Наличные курьеру при получении товара Киев</h5>
+
+					<p>Данный способ оплаты доступен только по Киеву. Вы оплачиваете товар, после того, как получите товар от нашего курьера.</p>
+
+					<h5>Наложенный платеж Новая Почта, Украина</h5>
+
+					<p>Данный способ оплаты доступен для всех городов, кроме Киева. При получении товара в своем городе через службу доставки "Новая почта". Оплата происходит непосредственно в отделении, после того, как вы заберете товар. При данном способе оплаты вам так же необходимо заплатить 2% за пересылку денег Новой Почты магазину.</p>
+
+					<h5>Карта ПриватБанка Украина</h5>
+
+					<p>Данный способ оплаты доступен по всей Украине и осуществляется перед тем, как вы получаете товар. Так же необходимо оплачиывать 1% от стоимости заказа, который является комиссией банка. Реквезиты карточки скидываются после Оформления заказа.</p>
+
+					<h5>Карта ДельтаБанка Украина</h5>
+
+					<p>Данный способ оплаты доступен по всей Украине и осуществляется перед тем, как вы получаете товар. Так же необходимо оплачиывать 0.25% от стоимости заказа, который является комиссией банка. Реквезиты карточки скидываются после Оформления заказа.</p>
+				</section>
+				
+
+				<section class="about-block">
+					<h3 class="anchor"  id="service">Гарантия и Сервис</h3>
+					<h5>Можно ли вернуть товар если он мне не подошел?</h5>
+
+					<p>Конечно же вы имеете право вернуть товар в течение 14 дней, при условии сохранности товарного вида и документов подтверждающих покупку.</p>
+
+					<p><b>Вы можете вернуть товар если:</b></p>
+
+					<ul>
+						<li>Товар не был в употреблении и не имеет следов использования: царапин, сколов, потертостей, программное обеспечение не подвергалось изменениям и т.д.</li>
+						<li>Товар полностью укомплектован и не нарушена целостность упаковки.</li>
+					</ul>
+
+					<p>Если в товаре проявился дефект, обмен или возврат товара производится только после диагностики сервисного центра, который указан в гарантийном талоне.</p>
+
+					<h5>Где и как можно произвести обмен или возврат товара?</h5>
+
+					<p>Для того чтобы произвести обмен или возврат товара вам необходимо позвонить на номер (096) 766 66 46, указать ваш номер заказа, после согласования всех данных с Менеджром контак-центра, к вам приедет курьер магазина для возврата товара.</p>
+
+					<p><b>При себе вам нужно иметь товар, упаковку и комплектующие к нему, гарантийный талон и товарный чек.</b></p>
+
+					<p>Мы вернем деньги в день возврата товара или, в случае отсутствия денег в кассе, не позже, чем через 7 дней.</p>
+
+					<p>Если вы находитесь не в Киеве, товар необходимо отправить «Новой Почтой». Подробности пересылки уточняйте по тел. (096) 766 66 46. Условия обмена или возврата товара указаны выше.</p>
+
+					<h5>Куда обращаться по вопросам гарантийного обслуживания?</h5>
+
+					<p>По вопросам гарантийного обслуживания обращайтесь в сервисный центр, указанный в гарантийном талоне либо уточняйте по тел. (096) 766 66 46.</p>
+
+					<h5>Куда звонить если я сдал товар в сервисный центр магазина и хочу уточнить, что с ним?</h5>
+
+					<p>В отрывном талоне, который вам выдал сервисный отдел, указан контактный телефон, по которому следует обращаться по вопросам сервисного обслуживания вашего товара. Позвонив по нему, вы получите актуальную информацию о товаре.</p>
+
+					<h5>Какова гарантия на этот товар?</h5>
+
+					<p>Срок гарантии указан в описании каждого товара на сайте. Гарантия предоставляется на срок от 1 месяца до 12 месяцев, в зависимости от товара. Гарантия может быть представлена производителем либо магазином «МобиМолл». Подтверждением гарантийных обязательств служит гарантийный талон производителя либо гарантийный талон магазина «МобиМолл».</p>
+
+					<h5>В каких случаях гарантия не предоставляется?</h5>
+
+					<p><b>Сервисный центр может отказать в гарантийном ремонте в случае:</b></p>
+
+					<ul>
+						<li>нарушения сохранности гарантийных пломб;</li>
+						<li>наличия механических или иных повреждений, возникших вследствие умышленных или неосторожных действий покупателя или третьих лиц;</li>
+						<li>нарушение правил использования;</li>
+						<li>несанкционированного вскрытия, ремонта или изменения внутренних коммуникаций и компонентов товара, изменения конструкций или схемы товара;</li>
+						<li>неправильного заполнения гарантийного талона;</li>
+						<li>если серийный номер или MAC адрес, находящиеся в памяти изделия, изменены, стёрты или не могут быть установлены.</li>
+					</ul>
+
+					<p><b>Гарантийные обязательства не распространяются на следующие неисправности:</b></p>
+
+					<ul>
+						<li>случайные повреждения (дефекты причиненные клиентом);</li>
+						<li>повреждения в результате стихийных бедствий (природных явлений);</li>
+						<li>повреждения, возникшие вследствие небрежного отношения или использования (несоблюдение температурного режима, воздействие жидкости, запыленности, механические повреждения, попадание внутрь корпуса посторонних предметов);</li>
+						<li>повреждения, вызванные аварийным повышением или понижением напряжения в сети;</li>
+						<li>повреждения, вызванные неправильным подключением к электросети;</li>
+						<li>повреждения, вызванные дефектами системы, в которой использовался данный товар, или возникшие в результате соединения и подключения товара к другим изделиям;</li>
+						<li>повреждения, вызванные использованием товара не по назначению или с нарушением правил эксплуатации.</li>
+					</ul>
+					</section>					
+
+					<section class="about-block">
+						<h3 class="anchor" id="stock">Акции</h3>
+						<h5>К каждому коммуникатору или планшету аксессуар в Подарок! только до 31 декабря 2013 года</h5>
+
+						<h5>Коммуникаторы Zopo со скидкой 10% только до 24 декабря</h5>
+
+						<p>&nbsp;</p>
+					</section>
+				
+				<section class="about-block">
+				<h3 class="anchor"  id="credit">Кредиты</h3>
+				<table border="0" cellpadding="10" cellspacing="0" style="width: 700px;">
+					<tbody>
+						<tr>
+							<td style="width: 250px;"></td>
+							<td>
+							<h5>У Вас появилось желание купить понравившейся товар, а средств недостаточно?</h5>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<p>Интернет-магазин «МобиМолл» предоставляет Вам возможность оформить кредит быстро и с минимальным пакетом документов - без справки о доходах и поручительства.</p>
+
+				<p>Кредиты предоставляются банками-партнерами: Дельта Банк, Банк Русский Стандарт и ОТП Банк.</p>
+
+				<h5>Условия кредитования:&nbsp;</h5>
+
+				<ul>
+					<li>Сумма кредита — от 500 до 50 000 грн.</li>
+					<li>Срок от 6 до 36 месяцев.</li>
+					<li>Первоначальный взнос — от 0%</li>
+					<li>Быстрое решение о выдаче кредита.</li>
+					<li>Досрочное погашение кредита без штрафных санкций и дополнительных затрат.</li>
+				</ul>
+
+				<h5>Требования к заёмщику:</h5>
+
+				<ul>
+					<li>Гражданство Украины.</li>
+					<li>Возраст – от 21 до 65 лет.</li>
+					<li>Постоянное место проживания на территории Украины (регистрация на территории Украины).</li>
+					<li>Постоянное место работы.</li>
+				</ul>
+
+				<p>Более детальную информацию по кредитованию Вы можете уточнить у менеджеров по телефонам (096) 766 66 46!</p>
+
+				<p>Удачных покупок!</p>
+
+				<p>&nbsp;</p>
+				</section>
+			</div>
+		</div>
+	</div>
+	
+	<footer class="footer" role="footer">
+		<div class="container clearfix">
+			<div class="row">
+				<div class="col-lg-10 col-md-9 col-sm-7"><div class="row">
+					<nav class="info-menu col-lg-6 col-md-6 col-sm-12 pull-left">
+						<ul class="info-menu-list list-unstyled">
+							<li><a href="#contact">Контакты</a></li>
+							<li><a href="#delivery">Оплата заказа</a></li>
+							<li><a href="#payment">Пользовательское соглашение</a></li>
+							<li><a href="#service">Гарантия и Сервис</a></li>
+							<li><a href="#stock">Акции</a></li>
+							<li><a href="#credit">Вопросы и ответы</a></li>
+							<li><a href="#credit">Служба поддержки</a></li>
+						</ul>
+					</nav>
+					<div class="subscribe col-lg-6 col-md-6 col-sm-12 pull-left">Подпишитесь на рассылку эксклюзивных предложений 
+						<form class="form-inline" role="form">
+							<input type="email" class="form-control" placeholder="Ваш e-mail"/>
+							<button class="btn btn-primary">Подпишись!</button>
+						</form>
+					</div>
+				</div></div>
+				<div class="social-box col-lg-2 col-md-3 col-sm-5 pull-right">
+					<span>Присоединяйся к нам!</span>
+					<ul class="social-list list-unstyled list-inline">
+						<li>
+							<a href="" class="vk"></a>
+						</li>
+						<li>
+							<a href="" class="fb"></a>
+						</li>
+						<li>
+							<a href="" class="tw"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright_text small">Copyright © 2014 eFlat.com. Все права защищены.</div>
+		</div>
+	</footer>
+</body>
+</html>

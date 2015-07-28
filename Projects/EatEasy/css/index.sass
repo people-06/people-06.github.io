@@ -1,0 +1,1021 @@
+@import "include/fonts.sass"
+@import "include/variables.sass"
+@import "include/sprites.sass"
+
+* 
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+	margin: 0
+	padding: 0
+
+html, body
+	height: 100%
+
+body
+	-webkit-touch-callout: none
+	-webkit-text-size-adjust: none
+	-webkit-user-select: none
+	font: 22px $fontRegular
+	width: 100%
+	
+	&:after
+		content: ''
+		display: block
+		height: 100px
+		position: fixed
+		right: 0
+		bottom: 0
+		left: 0
+		width: 100%
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(139,139,139,0.7)))
+		background: -webkit-linear-gradient(top,  rgba(255,255,255,0.3) 0%,rgba(139,139,139,0.7) 100%)
+		background: linear-gradient(to bottom,  rgba(255,255,255,0.3) 0%,rgba(139,139,139,0.7) 100%)
+
+ul 
+	list-style-type: none
+a
+	color: $black
+	text-decoration: none
+
+h1, h2
+	font: 31px $fontBold
+	text-align: center
+	text-transform: uppercase
+input, textarea
+	border-radius: 0
+	box-sizing: border-box
+	padding: 0 35px
+	outline: none
+	width: 100%
+
+// HEADER	
+header
+	background:	url(../img/header-bg.jpg) no-repeat
+	background-size: 100% 100%
+	border-bottom: $greenBorder
+	border-top: 1px solid #358118
+	height: 106px
+	padding: 3px
+	text-align: center
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	z-index: 2
+	width: 100%
+	
+	.logo-link
+		display: inline-block
+		font-size: 0
+		padding-top: 10px
+		
+	.menu-toggle,.search-btn
+		border: 0
+		cursor: pointer
+		
+		
+	.menu-toggle
+		@include sprite-base
+		@include sprite-menu-icon
+		float: left
+		margin: 35px
+	
+	.search
+		float: right
+		height: 110px
+		
+		.search-btn
+			background-color: transparent
+			height: 110px
+			position: relative
+			width: 110px
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				top: 35px
+				left: 35px
+				@include sprite-base
+				@include sprite-search-icon
+		
+		&.active
+			.search-btn
+				background-color: $green
+				&:after
+					@include sprite-white-search-icon
+		input
+			padding-top: 0
+			
+.search-input
+	display: none
+.active .search-input
+	display: block
+	background: $green
+	padding: 35px
+	position: absolute
+	margin-top: -3px
+	top: 100%
+	right: 3px
+	left: 3px
+	z-index: 2
+	
+	input
+		background: transparent
+		border: solid $white
+		border-width: 0 0 1px
+		font-size: 30px
+		outline: none
+		text-align: center
+		text-transform: uppercase
+		width: 100%
+				
+				
+// MENU
+.menu-wrap
+	background: $black
+	box-sizing: border-box
+	position: fixed
+	top: 0
+	bottom: 0
+	left: -400px
+	padding: 0 25px 0 15px
+	width: 400px
+	z-index: 20
+		
+	.top-menu
+		li
+			border-bottom: 1px solid $white
+	.bottom-menu
+		position: absolute
+		bottom: 0
+		left: 20px
+		right: 20px
+		li
+			border-top: 1px solid $white
+	
+	li
+		padding: 0 20px
+		text-align: left
+		vertical-align: middle
+		
+	a
+		color: #fefefe
+		display: inline-block
+		padding: 25px 0
+		position: relative
+		vertical-align: middle
+		
+		&:before
+			content: ''
+			display: inline-block
+			@include sprite-base
+			margin-right: 20px
+			vertical-align: middle
+	.search-icon
+		&:before
+			@include sprite-menu-search-icon
+	.star-icon
+		&:before
+			@include sprite-menu-star-icon
+	.heart-icon
+		&:before
+			@include sprite-menu-heart-icon
+	.order-icon
+		&:before
+			@include sprite-menu-order-icon
+	.data-icon
+		&:before
+			@include sprite-menu-data-icon
+	.about-icon
+		&:before
+			@include sprite-menu-about-icon
+	.support-icon
+		&:before
+			@include sprite-menu-support-icon
+	
+
+// CONTENT
+section
+	background: $mainBackground
+	box-sizing: border-box
+	min-height: 100%
+	padding-top: 113px
+	padding-bottom: 175px
+		
+.map-box 
+	background: url(../img/intro-bg.jpg)
+	background-size: 100%
+	position: fixed
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: -1
+	
+.map
+	height: 600px !important
+	width: 100% !important
+	.gm-style
+		.gmnoprint,.gm-style-cc, a
+			display: none !important
+	
+.content
+	background: $mainBackground
+	border-top: $greenBorder
+	padding: 0 10px
+
+	> h2
+		padding: 70px 0 0
+	
+	> article
+		padding: 0 40px 200px
+			
+		p
+			margin: 30px 0
+
+.swipe-btn-wrap 
+	cursor: pointer
+	height: 25px
+	margin: -25px auto 0
+	overflow: hidden
+	width: 58px
+	
+	.swipe-btn
+		background: $green
+		border-radius: 50%
+		display: block
+		height: 50px
+		position: relative
+		width: 58px
+		
+		&:before, &:after
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-left: 16px solid transparent
+			border-right: 16px solid transparent
+			border-bottom: 12px solid $white
+			border-radius: 50%
+			position: absolute
+			left: 50%
+			margin-left: -15px
+			top: 8px
+		&:after
+			border-bottom-color: $green
+			top: 12px
+
+.opacity-bg
+	background: $opacityBackground
+	.content
+		background: transparent
+		
+//PLACE LIST
+.list
+	padding-bottom: 80px
+	
+	li
+		border-bottom: $greenBorder
+		font-family: $fontRegular
+		padding: 55px 0 45px
+		position: relative
+				
+	.sub-info:after
+		content: ''
+		display: block
+		margin-top: -21px
+		position: absolute
+		top: 50%
+		right: 0
+		@include sprite-base
+		@include sprite-arrow-right
+			
+	.order-details
+		display: block
+		background: $green
+		margin: 25px 35px 0
+		padding: 26px
+		text-align: center
+		vertical-align: middle
+		
+		span
+			display: inline-block
+			font: 20px $fontBold
+			vertical-align: middle
+		
+		.order-time
+			font-size: 33px
+
+			&:before
+				content: ''
+				display: inline-block
+				@include sprite-base
+				@include sprite-clock-icon
+				margin: 0 20px
+				vertical-align: middle
+
+.place-info-wrap
+	display: block
+	vertical-align: middle
+	font-size: 0
+	position: relative
+	
+	> div
+		display: inline-block
+		vertical-align: middle
+		color: $black
+		font-size: 12px
+		
+	.img-wrap
+		padding: 0 10px
+		text-align: center
+		width: 170px
+		font-size: 0
+
+	.place-info
+		padding-left: 8px
+		padding-right: 20px
+		width: 270px
+		
+		.place-name
+			text-align: left
+		
+		div 
+			font-size: 22px
+			font-style: normal
+		
+.sub-info
+	text-align: center
+
+	span
+		display: block
+		
+	.bold
+		font: 42px/32px $fontBold
+		color: $black
+		
+		+ span
+			font-size: 18px
+			color: $gray
+			
+
+				
+.prefer-star
+	display: block
+	position: absolute
+	left: 0
+	top: 10px
+	@include sprite-base
+	@include sprite-star-icon
+	&.un
+		@include sprite-un-star-icon	
+
+.country-list
+	li
+		border-bottom: $blackBorder
+		line-height: 26px
+		position: relative
+		
+		&:before, &:after
+			content: ''
+			display: block
+			width: 0
+			height: 0
+			border-top: 18px solid transparent
+			border-bottom: 18px solid transparent
+			border-left: 20px solid $gray
+			border-radius: 45%
+			position: absolute
+			right: 0
+			top: 50%
+			margin-top: -18px
+		&:after
+			border-left-color: $white
+			right: 4px
+	
+	a
+		display: block
+		padding: 24px 0
+			
+	span
+		color: #000
+		display: inline-block
+		font-size: 30px
+		vertical-align: middle
+	.prefer-star
+		position: static
+		margin-right: 25px
+
+.order-types		
+	text-align: center
+	
+	.order-types-inner 
+		display: inline-block
+		padding: 0 60px 
+		
+	.current 
+		z-index: 2
+		position: relative
+		span
+			border-bottom: $greenBorder
+			display: inline-block
+			font: 30px $fontBold
+			margin: 10px 55px 0 0
+			text-align: center
+			position: relative
+			width: 200px
+			cursor: pointer
+			
+			&:before, &:after
+				content: ''
+				display: block
+				width: 0
+				height: 0
+				border-left: 12px solid transparent
+				border-right: 12px solid transparent
+				border-top: 13px solid $gray
+				position: absolute
+				right: -55px
+				bottom: 5px
+			&:after
+				border-top-color: $white
+				bottom: 7px
+	.select-list
+		display: none
+		border: $greenBorder
+		border-width: 0 2px 2px
+		margin: -70px -60px 0
+		padding: 90px 15px 15px
+		position: relative
+		z-index: 1
+		text-transform: none
+		a
+			font-size: 22px
+			&.active
+				font-size: 30px
+.product-list
+	margin-top: 40px
+	dt
+		border-top: $blackBorder
+		cursor: pointer
+		height: 90px
+		line-height: 90px
+		padding: 0 30px
+		
+		h2
+			display: inline-block
+			padding-left: 45px
+			vertical-align: middle
+		img
+			vertical-align: middle
+			max-width: 90px
+	dd
+		padding: 10px 0
+		
+		li
+			padding-bottom: 20px
+		
+		img
+			display: inline-block
+			border: $blackBorder
+			max-width: 90px
+			
+	.img-wrap
+		max-width: 90px
+		padding-right: 40px
+		
+	.product-info
+		display: inline-block
+		width: 230px	
+		
+		a
+			border-bottom: 1px dashed #000
+			font-size: 24px
+			
+	.bold
+		font-size: 44px
+		
+	.sub-info
+		padding: 0 10px
+		width: 115px
+		
+	.add
+		background: $green
+		border: 0
+		border-radius: 50%
+		cursor: pointer
+		display: inline-block
+		height: 64px
+		position: relative
+		vertical-align: middle
+		width: 64px
+		
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+		&:before
+			width: 36px
+			border-top: 2px solid $grayDark
+			left: 14px
+			top: 32px
+		&:after
+			height: 36px
+			border-left: 2px solid $grayDark
+			left: 32px
+			top: 14px
+
+form 
+	text-transform: uppercase
+	h2
+		margin: 75px 0 35px
+	
+	input
+		border-bottom: $greenBorder
+		border-width: 0 0 1px
+		display: block
+		font-size: 30px
+		line-height: 30px
+		padding-top: 20px
+		text-align: center
+		+ h2
+			margin: 50px 0 35px
+	textarea
+		background: url(../img/textarea-bg.png) repeat
+		border: 0
+		font: 30px/50px $fontRegular
+		min-height: 300px
+
+.link-btn,.cancel-link-btn
+	background: transparent
+	border: 0
+	display: block
+	text-transform: uppercase	
+.link-btn
+	color: $green
+	font: 45px $fontBold
+	margin: 40px auto
+	.link-btn + .link-btn
+		margin: 30px auto
+.cancel-link-btn	
+	color: #838383
+	font: 27px $fontBold
+	margin: 30px auto
+.product
+	margin-top: 43px
+	padding-left: 10px
+	
+	img
+		border: 1px solid rgba($black, 0.22)
+		box-sizing: border-box
+		font-size: 0
+		padding: 8px
+		width: 100%
+		
+	.slideSelectors
+		text-align: center
+		padding: 7px 0 11px
+		.item
+			background: $grayDark
+			border-radius: 50%
+			cursor: pointer
+			display: inline-block
+			height: 13px
+			margin: 0 3px
+			width: 13px
+			&.active
+				background: $green
+	
+	.product-info
+		text-align: center
+		span
+			display: block
+			font-size: 20px
+			line-height: 24px
+			margin: 6px auto 8px
+			width: 350px
+		.time
+			font: 33px $fontBold
+			margin: 14px auto 21px
+			&:before
+				content: ''
+				display: inline-block
+				@include sprite-base
+				@include sprite-clock-green-icon
+				margin: 0 20px
+				vertical-align: middle
+		.price
+			font: 74px/51px $fontBold
+			margin-bottom: 0
+		.rub
+			font-size: 18px
+			color: $gray
+			
+.buttons-group
+	background: url(../img/shadow.png) no-repeat center 100%
+	cursor: pointer
+	text-align: center
+	
+	.green-wrap
+		background: $green
+		border: 5px solid $white
+		border-radius: 50%
+		display: inline-block
+		height: 160px
+		line-height: 160px
+		position: relative
+		text-align: center
+		width: 160px
+		z-index: 1
+		margin-bottom: 15px
+		.basket-link
+			@include sprite-base
+			@include sprite-basket-icon
+			display: inline-block
+			vertical-align: middle
+		
+	.left-btn,.right-btn
+		background: $white
+		border-radius: 50%
+		display: inline-block
+		height: 104px
+		line-height: 104px
+		position: relative
+		text-align: center
+		vertical-align: bottom
+		width: 104px
+		z-index: 0
+		margin-bottom: 13px
+	.left-btn
+		margin-right: -30px
+		&.back-btn
+			&:after
+				content: ''
+				@include sprite-base
+				@include sprite-back-arrow-icon
+				display: inline-block
+				vertical-align: middle
+	.right-btn
+		margin-left: -30px
+		&.basket-link
+			&:after
+				content: ''
+				@include sprite-base
+				@include sprite-basket-icon-small
+				display: inline-block
+				vertical-align: middle
+	
+	.add-btn
+		border: 0
+		display: block
+		height: 100%
+		
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+		&:before
+			width: 71px
+			border-top: 3px solid $grayDark
+			left: 50%
+			margin-top: -1px
+			top: 50%
+			margin-left: -35px
+		&:after
+			height: 71px
+			border-left: 3px solid $grayDark
+			left: 50%
+			margin-left: -1px
+			top: 50%
+			margin-top: -35px
+			
+	.cancel-link
+		border: 0
+		
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+		&:before
+			height: 35px
+			border-left: 3px solid $grayDark
+			left: 50%
+			top: 50%
+			margin-top: -15px
+			-webkit-transform: rotate(45deg)
+			transform: rotate(45deg)
+		&:after
+			height: 35px
+			border-left: 3px solid $grayDark
+			left: 50%
+			top: 50%
+			margin-top: -15px
+			-webkit-transform: rotate(-45deg)
+			transform: rotate(-45deg)
+	
+// FOOTER			
+footer
+	position: fixed
+	bottom: 0
+	width: 100%
+	z-index: 2
+	
+.basket
+	background: $green
+	border: 8px solid $white
+	border-radius: 50%
+	box-shadow: 0 15px 30px #666
+	height: 175px
+	line-height: 175px
+	margin: 0 auto 10px
+	text-align: center
+	width: 175px
+		
+	.basket-link
+		@include sprite-base
+		@include sprite-basket-icon
+		display: inline-block
+		vertical-align: middle
+	
+/* slider container */
+.iosSlider
+	/* required */
+	position: relative
+	z-index: 1
+	top: 0
+	left: 0
+	width: 570px
+	height: 935px
+	margin: 0 auto
+	padding-top: 30px
+
+	.slider 
+		/* required */
+		width: 100%
+		height: 100%
+
+		.slide
+			/* required */
+			float: left
+			width: 575px
+			height: 935px
+
+	.bx-pager
+		padding: 50px 0
+		text-align: center
+
+		.bx-pager-item 
+			display: inline-block
+			margin: 0 6px
+			.bx-pager-link
+				display: inline-block
+				width: 17px
+				height: 17px
+				border-radius: 50%
+				background-clip: padding-box
+				background-color: $grayDark
+				box-shadow: 2px 2px 0 rgba($black, 0.4)
+				text-indent: -999em
+				&.active
+					background-color: #ef6b68
+
+// Styles for one blocks on different pages
+.search-results-page
+	.content
+		padding-top: 110px
+			
+body.into			
+	background: url(../img/intro-bg.jpg) no-repeat
+	background-size: 100%
+	&:after
+		display: none
+			
+.product-list-page
+	.content
+		padding: 40px 35px
+	.about-place
+		font-size: 18px
+		font-style: italic
+		margin: 20px 0
+		
+.support-page	
+	.support-msg
+		text-transform: initial
+		input
+			text-align: left	
+	textarea
+		margin-top: 20px
+h2 + input
+	padding-top: 0		
+.chosemeal
+	.current
+		span
+			font-family: $fontRegular
+			text-transform: none
+			width: auto
+	.link-btn
+		margin-top: 125px
+		
+.product-page
+	.content
+		padding-top: 40px
+
+.order-page
+	header
+		height: auto
+		position: static
+		border: 0
+		margin-left: 0 !important
+	section
+		padding-top: 0
+		min-height: 0
+	.place-info-wrap
+		border-bottom: $greenBorder
+		padding: 35px 20px
+		text-align: left
+		margin: 0 -10px
+		background: url(../img/header-bg.jpg) no-repeat
+		background-size: 100% 100%
+	.sub-info:after
+		display: none
+	.link-btn
+		margin: 70px auto 30px
+	.content
+		padding-bottom: 30px
+	
+.order-list	
+	padding: 75px 0 40px
+	li
+		padding: 22px 0 25px 12px
+		&:first-child
+			border-top: 1px solid #89DD67
+	li > *		
+		display: inline-block
+		vertical-align: middle
+	.product-info
+		padding-right: 20px
+		margin-left: 10px
+		width: 220px
+		.product-name
+			border-bottom: 1px dashed #000
+			font-size: 24px
+	.place-info 
+		width: 255px
+	.count
+		height: 46px
+		padding-right: 10px
+		width: 150px
+		button
+			background: $green
+			border: 0
+			border-radius: 50%
+			cursor: pointer
+			height: 46px
+			width: 46px
+			vertical-align: middle
+			position: relative
+			
+			&.disabled
+				background: #e6e6e6
+		
+			&.minus
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					width: 26px
+					border-top: 2px solid $grayDark
+					left: 50%
+					margin-top: -1px
+					top: 50%
+					margin-left: -13px
+			&.plus
+		
+				&:before, &:after
+					content: ''
+					display: block
+					position: absolute
+				&:before
+					width: 26px
+					border-top: 2px solid $grayDark
+					left: 50%
+					margin-top: -1px
+					top: 50%
+					margin-left: -13px
+				&:after
+					height: 26px
+					border-left: 2px solid $grayDark
+					left: 50%
+					margin-left: -1px
+					top: 50%
+					margin-top: -13px
+		input
+			background: $white
+			border: 0
+			font: 33px/46px $fontBold
+			margin: 0 1px
+			padding: 0
+			text-align: center
+			width: 45px
+			vertical-align: middle
+			
+	.sub-info
+		width: 115px
+		padding: 0 18px 0 0
+		
+	.remove-btn
+		background: #ef726e
+		border: 0
+		border-radius: 50%
+		cursor: pointer
+		height: 46px
+		width: 46px
+		position: relative
+		
+		&:before, &:after
+			content: ''
+			display: block
+			position: absolute
+		&:before
+			height: 26px
+			border-left: 2px solid $grayDark
+			left: 50%
+			top: 50%
+			margin-left: 0px
+			margin-top: -13px
+			-webkit-transform: rotate(45deg)
+			transform: rotate(45deg)
+		&:after
+			height: 26px
+			border-left: 2px solid $grayDark
+			left: 50%
+			top: 50%
+			margin-left: 0px
+			margin-top: -13px
+			-webkit-transform: rotate(-45deg)
+			transform: rotate(-45deg)
+		
+.processing-time
+	font: 33px $fontBold
+	text-align: center
+	&:before
+		content: ''
+		display: inline-block
+		@include sprite-base
+		@include sprite-clock-green-icon
+		margin: 0 20px
+		vertical-align: middle
+.total-info
+	color: $gray
+	text-align: center
+	margin: 35px
+	.bold
+		display: block
+		color: $black
+		font: 74px/50px $fontBold			
+.open-menu			
+	.modal-wrap	
+		display: none
+.modal-wrap
+	.modal
+		background: rgba($white, 0.9)
+		border: 1px solid #4f4f4f
+		box-sizing: border-box
+		font-size: 39px
+		height: 550px
+		padding: 60px
+		text-align: center
+		width: 580px
+		position: fixed
+		z-index: 99
+		top: 220px
+		left: 50%
+		margin-left: -290px
+		
+		a, button
+			cursor: pointer
+		
+		.modal-price
+			font-family: $fontBold
+		.modal-place
+			text-transform: uppercase
+		.select-list
+			padding-bottom: 40px
+			a
+				font-size: 30px
+				text-transform: initial
+				width: auto
+		input
+			padding-top: 10px
+		.third-slide
+			p
+				font-size: 32px
+				margin: 80px 0 10px
+				
+.about 
+	.content
+		padding-top: 75px
+	article
+		padding-bottom: 0
+	p
+		font-size: 25px
+	

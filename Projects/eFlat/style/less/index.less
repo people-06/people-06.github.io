@@ -1,0 +1,148 @@
+/* Index page */
+
+.banner {
+	height: 400px;
+	background: url(../../images/new-york-3.jpg) no-repeat center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+ .popular-city-list {
+	list-style-type: none;
+	text-align: justify;
+	padding: 0;
+	line-height: 0;
+	
+	&:after {
+		content: '';
+		display: inline-block;
+		width: 100%;
+	}
+ 
+	li {
+		.inline-block-top();
+		line-height: normal;
+		width: 32%;
+		
+		a {
+			position: relative;
+			display: block;
+		}
+	}
+	
+	img {
+		width: 100%;
+	}
+	span {
+		font-size: 20px;
+		color: #fff;
+		display: block;
+		height: 38px;
+		margin-top: -38px;
+		.bg-opacity();
+		padding: 5px 10px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+ }
+
+.countries-list {
+	li {
+		padding: 5px 0;
+	}
+
+	a {
+		font-size: 18px;
+		font-weight: 600;
+	}
+}
+
+.country-with-city {
+	padding: 0;
+		
+	.list {
+		b {
+			display: block;
+			font-size: 15px;
+		}
+		
+		a {
+			display: block;
+			color: #2c3e50;
+			//border-bottom: 1px solid #2c3e50;
+			&:hover {
+				//border-bottom: 0;
+			}
+		}
+		
+	}
+
+	.header-country {
+		font: 700 20px/26px 'Open Sans Condensed', sans-serif;
+		background: #323a45;
+		color: #fff;
+		display: block;
+		clear: both;
+		margin: 10px 0;
+		padding: 6px 10px;
+		
+		img {
+			height: 20px;
+			margin-right: 10px;
+			margin-top: -4px;
+		}
+	}
+	.city-list-1 .header-country {
+		margin-top: 0;
+	}
+	.go-to-up {
+		clear: both;
+		text-align: right;
+		padding-right: 10px;
+		
+	}
+}
+
+.about-page {
+	h2 {
+		margin-bottom: 30px;
+	}
+	.about-block {
+		margin-top: -10px;
+	}
+	.anchor {
+		margin-top: 0;
+		padding-top: 10px
+	}	
+}
+
+.fixed-left-menu {
+	padding-left: 0;
+	
+	.anchor-menu {
+		width: 245px;
+		
+		&.affix {
+			top: 20px;
+		}
+	}
+	
+	.nav-pills {
+		> li{
+			margin-top: 0;
+			a {
+				border-bottom: 1px solid @default-custom;
+			}
+		
+			&.active a{
+				color: #34495e;
+				background: @default-custom;
+				border-left: 2px solid @brand-primary;
+			}
+		
+		}
+	}
+}

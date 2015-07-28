@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "FuturaBookC";
+  src: local("FuturaBookC");
+  src: url("../fonts/FuturaBookC.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "FuturaDemiC";
+  src: local("FuturaDemiC");
+  src: url("../fonts/FuturaDemiC.ttf") format("truetype"); }

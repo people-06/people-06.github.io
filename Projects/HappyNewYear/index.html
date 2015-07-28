@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Happy New Year</title>
+<style>
+body{text-align:center}
+canvas{border: 1px solid #aaa}
+</style>
+<!--[if lt IE 9]>
+<script>
+    document.createElement(canvas);
+</script>
+<![endif]-->
+</head>
+<body>
+<canvas id="SnowMen" width="400" height="500"></canvas>
+</form>
+<script>
+function draw_SnowMen() {
+	var SnowMen_canvas = document.getElementById("SnowMen");
+	var context = SnowMen_canvas.getContext("2d");
+	//Gradient
+	var my_gradient = context.createLinearGradient(0, 0, 0, 425);
+	my_gradient.addColorStop(0, "#fff");
+	my_gradient.addColorStop(1, "#7DB9E8");
+	context.fillStyle = my_gradient;
+	context.fillRect(0, 0, 400, 500);
+	
+	//Text
+	context.strokeStyle = '#C12926';
+	context.lineWidth = 2;
+	context.font = 'bold 35px sans-serif';
+	context.strokeText('Happy New Year!', 55, 50);	
+	context.strokeText('Be Happy!', 110, 90);	
+	context.fillStyle = '#fff';
+	context.font = '10px sans-serif';
+	context.fillText('With love from Lika Pr', 5, 498);	
+	context.font = '9px sans-serif';
+	context.fillText('2012 - 2013', 345, 498);	
+	
+	//Shadow
+	context.beginPath();
+	context.shadowOffsetX = 1;
+	context.shadowOffsetY = 2;
+	context.shadowBlur = 4;
+	context.shadowColor = 'rgba(0, 0, 0, 0.5)';
+	
+	//Circles Body
+	context.fillStyle = '#fff';
+	context.fill();
+	context.beginPath();
+	context.arc(200, 420, 80, 0, Math.PI*2, true); // 1 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(200, 300, 60, 0, Math.PI*2, true); // 2 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(200, 210, 40, 0, Math.PI*2, true); // 3 circle
+	context.fill();
+	context.closePath();
+	
+	//Circles Hand
+	context.beginPath();
+	context.arc(130, 270, 20, 0, Math.PI*2, true); // 1 circle left
+	context.arc(270, 270, 20, 0, Math.PI*2, true); // 2 circle right
+	context.fill();
+	
+	//Buttons
+	context.beginPath();
+	context.fillStyle = '#7A4618';
+	context.arc(200, 290, 10, 0, Math.PI*2, true);
+	context.arc(200, 340, 10, 0, Math.PI*2, true);
+	context.arc(200, 395, 10, 0, Math.PI*2, true);
+	context.fill();
+	context.closePath();
+	
+	//Circles Eyes
+	context.shadowColor = 'rgba(0, 0, 0, 0)';
+	context.fillStyle = '#7DB9E8';
+	context.beginPath();
+	context.arc(185, 197, 5, 0, Math.PI*2, true); // 1 circle left
+	context.arc(215, 197, 5, 0, Math.PI*2, true); // 2 circle right
+	context.fill();
+	
+	//Nose
+	context.beginPath();
+	context.fillStyle = '#FF8132';
+	context.moveTo(200, 207); 
+	context.lineTo(250, 210);
+	context.lineTo(200, 221);
+	context.lineTo(200, 208);
+	context.fill();
+	context.arc(200, 214, 7, 0, Math.PI*2, true);
+	context.fill(); 
+	
+	//Lips
+	context.fillStyle = '#7DB9E8';
+	context.beginPath();
+	context.arc(180, 230, 4, 0, Math.PI*2, true); // 1 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(190, 234, 4, 0, Math.PI*2, true); // 2 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(200, 235, 4, 0, Math.PI*2, true); // 3 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(210, 234, 4, 0, Math.PI*2, true); // 4 circle
+	context.fill();
+	context.closePath();
+	context.beginPath();
+	context.arc(220, 230, 4, 0, Math.PI*2, true); // 5 circle
+	context.fill();
+	context.closePath();
+	
+	//Hat
+	context.beginPath();
+	context.fillStyle = '#9B521A';
+	context.strokeStyle = '#7B521A';
+	context.lineWidth = 2;
+	context.moveTo(175, 175); 
+	context.lineTo(225, 175);
+	context.lineTo(215, 140);
+	context.lineTo(185, 140);
+	context.lineTo(176, 175);
+	context.fill();
+	context.stroke();
+	context.beginPath();
+	context.arc(200, 165, 26, 3, Math.PI*2-6.15, true);
+	context.fill();
+	
+	//Broom
+	context.beginPath();
+	context.lineWidth = 4;
+	context.moveTo(285, 500); 
+	context.lineTo(285, 260);
+	context.stroke();
+	context.lineWidth = 2;
+	context.moveTo(284, 260);//
+	context.lineTo(275, 180);
+	context.lineTo(285, 260);//
+	context.lineTo(280, 180);
+	context.lineTo(285, 260);//
+	context.lineTo(285, 180);
+	context.lineTo(286, 260);//
+	context.lineTo(290, 180);
+	context.lineTo(286, 260);//
+	context.lineTo(295, 180);
+	context.lineTo(286, 260);//
+	context.stroke();
+}
+draw_SnowMen();
+</script>
+</body>
+</html>

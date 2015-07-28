@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Title here -->
+	<title>eFlat</title>
+	<meta charset="utf-8"/>
+	<!-- Description, Keywords and Author -->
+	<meta name="description" content="eFlat">
+	<meta name="keywords" content="eFlat">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Styles -->
+	<link href="style/css/style.css" rel="stylesheet">
+	<!-- JS -->
+    <script src="js/jquery.min.js"></script>
+    
+    <!-- scripts TeST 
+     	<script src="http://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>-->
+    	<link href="js/css/css_for_js.css" rel="stylesheet">
+    	<script src="js/bootstrap.min.js"></script>
+    	<script src="js/jquery-ui-1.10.4.custom.min.js"></script><!--datepicker-->
+		<script src="js/jquery.custom-scrollbar.min.js"></script>
+    	<script src="js/scripts.js"></script>
+    <!-- end scripts TeST -->
+	
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="#">
+</head>
+<body>
+	<header class="navbar" role="banner">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		  </button>
+		  <a href="../" class="navbar-brand">eFlat</a>
+		</div>
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+				  <a href="#">Регистрация</a>
+				</li>
+				<li>
+				  <a href="#" rel="login">Войти</a>
+				</li> 
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Помощь<b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Перейти в раздел FAQ</a></li>
+					<li class="divider"></li>
+					<li><a href="#">С чего начать</a></li>
+					<li><a href="#">Как создать аккаунт?</a></li>
+					<li><a href="#">Как сдать жилье</a></li>
+				  </ul>
+				</li>
+				<li>
+				  <a class="btn btn-primary" href="#">Сдайте свое жилье</a>
+				</li>
+			</ul>
+		</nav>
+	  </div>
+	</header>
+	
+	<div class="banner">
+		<div class="container">
+			<div id="indexFilter" class="index-filter filter">
+				<form class="form-inline" role="form">
+				  <div class="form-group long">
+					<input type="text" class="form-control" id="citySearch" placeholder="Куда Вы направляетесь?"><span class="glyphicon glyphicon-globe"></span>
+				  </div>
+				  
+				  <div class="form-group short">
+					<input type="text" class="form-control" id="startDate" placeholder="Заезд"><span class="glyphicon glyphicon-calendar d-start"></span>
+				  </div>
+				  
+				  <div class="form-group short">
+					<input type="text" class="form-control" id="endDate" placeholder="Отъезд"><span class="glyphicon glyphicon-calendar d-end"></span>
+				  </div>
+				  
+				  <div class="form-group short last">
+					<select class="form-control">
+					  <option>1 гость</option>
+					  <option>2 гостя</option>
+					  <option>3 гостя</option>
+					  <option>4 гостя</option>
+					  <option>5 гостя</option>
+					</select>
+				  </div>
+				  <button type="submit" class="btn btn-warning">Найти</button>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="popular block">
+			<h4>
+				Популярные направления
+			</h4>
+			<ul class="popular-city-list">
+				<li>
+					<a href="#"><img src="images/kiev.jpg" class="img-responsive" alt=""><span>Киев</span></a>
+				</li>
+			
+				<li>
+					<a href="#"><img src="images/lviv.jpg" class="img-responsive" alt=""><span>Львов</span></a>
+				</li>
+			
+				<li>
+					<a href="#"><img src="images/yalta.jpg" class="img-responsive" alt=""><span>Ялта</span></a>
+				</li>
+			
+				<li>
+					<a href="#"><img src="images/lviv.jpg" class="img-responsive" alt=""><span>Львов</span></a>
+				</li>
+
+				<li>
+					<a href="#"><img src="images/kiev.jpg" class="img-responsive" alt=""><span>Киев</span></a>
+				</li>
+			
+				<li>
+					<a href="#"><img src="images/yalta.jpg" class="img-responsive" alt=""><span>Ялта</span></a>
+				</li>
+
+				<li>
+					<a href="#"><img src="images/yalta.jpg" class="img-responsive" alt=""><span>Ялта</span></a>
+				</li>
+			
+				<li>
+					<a href="#"><img src="images/lviv.jpg" class="img-responsive" alt=""><span>Львов</span></a>
+				</li>
+
+				<li>
+					<a href="#"><img src="images/kiev.jpg" class="img-responsive" alt=""><span>Киев</span></a>
+				</li>
+			
+			</ul>
+
+			<div class="wrap-show-more">
+				<span class="show-more-popular">Показать ещё</span>
+			</div>
+
+
+		</div>
+		<div class="block">
+			<h4>
+				Хотите снять жильё посуточно?
+			</h4>
+			<P>На сайте «Суточно.ру» вы найдёте огромное количество интересных предложений по посуточной аренде жилья. В настоящее время здесь размещено более 30 тысяч объявлений от арендодателей из разных регионов России и других стран. </p>
+
+			<P>Вы получаете информацию из первых рук — арендодатели самостоятельно размещают здесь объявления о сдаче жилья на короткий срок. Общайтесь с ними напрямую без посредников! </p>
+
+			<P>Все объявления проходят предварительную проверку перед публикацией, что позволяет вам видеть только лучшие предложения по посуточной аренде квартир, комнат и коттеджей. </p>
+
+			<P>Если вы уже снимали жильё посуточно на Суточно.ру, то оставьте о нём отзыв — это поможет в выборе жилья на короткий срок другим пользователям, вашим друзьям и знакомым.</p>
+		</div>
+		<div class="row one-column">
+			<div class="col-lg-6 col-sm-6">
+				<div class="block">
+					<h4>
+						Вступайте в нашу группу ВКонтакте
+					</h4>
+					<p><img src="images/vk-example.png" class="img-responsive" /></p>
+				</div>
+			</div>
+			<div class="col-lg-6 col-sm-6">
+				<div class="block">
+					<h4>
+						Поддержите нас на Facebook — нажмите «Нравится»
+					</h4>
+					<p><img src="images/fb-example.png" class="img-responsive" /></p>
+				</div>
+			</div>
+		</div>
+		<div class="block">
+			<h4>
+				Все направления
+			</h4>
+			<ul class="countries-list list-unstyled list-inline clearfix">
+						<!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country1" onclick="return!1">Россия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country2" onclick="return!1">Украина</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country4" onclick="return!1">Беларусь</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country6" onclick="return!1">Казахстан</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country16" onclick="return!1">Абхазия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country8" onclick="return!1">Австрия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country15" onclick="return!1">Азербайджан</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country11" onclick="return!1">Армения</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country5" onclick="return!1">Болгария</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country7" onclick="return!1">Германия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country17" onclick="return!1">Греция</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country24" onclick="return!1">Израиль</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country23" onclick="return!1">Испания</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country21" onclick="return!1">Италия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country18" onclick="return!1">Кипр</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country28" onclick="return!1">Кыргызстан</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country13" onclick="return!1">Латвия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country12" onclick="return!1">Молдавия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country25" onclick="return!1">Тайланд</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country34" onclick="return!1">Турция</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country14" onclick="return!1">Финляндия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country19" onclick="return!1">Франция</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country20" onclick="return!1">Черногория</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country3" onclick="return!1">Чехия</a>
+				</li><!--
+				--><li class="col-lg-2 col-sm-3 col-xs-4">
+					<a href="" class="country36" onclick="return!1">Швеция</a>
+				</li><!---->
+			</ul>
+		</div>
+		
+		<div class="block country-with-city">
+			<ul id="cities" class="list-unstyled clearfix">
+			  <li class="city-list-1 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448936459341000.jpg" alt="">Россия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>А</b><a href="abakan" title="Жильё посуточно в&nbsp;Абакане  (149)">Абакан</a><a href="adler" title="Жильё посуточно в&nbsp;Адлере  (140)">Адлер</a><a href="azov" title="Жильё посуточно в&nbsp;Азове  (2)">Азов</a><a href="aldan" title="Жильё посуточно в&nbsp;Алдане  (3)">Алдан</a><a href="almetevsk" title="Жильё посуточно в&nbsp;Альметьевске  (42)">Альметьевск</a><a href="anapa" title="Жильё посуточно в&nbsp;Анапе  (45)">Анапа</a><a href="angarsk" title="Жильё посуточно в&nbsp;Ангарске  (49)">Ангарск</a><a href="apatity" title="Жильё посуточно в&nbsp;Апатитах  (1)">Апатиты</a><a href="arzamas" title="Жильё посуточно в&nbsp;Арзамасе  (32)">Арзамас</a><a href="armavir" title="Жильё посуточно в&nbsp;Армавире Краснодарского&nbsp;края (28)">Армавир</a><a href="artem" title="Жильё посуточно в&nbsp;Артёме Приморского&nbsp;края (2)">Артём</a><a href="arhangelsk" title="Жильё посуточно в&nbsp;Архангельске  (128)">Архангельск</a><a href="astrahan" title="Жильё посуточно в&nbsp;Астрахани  (151)">Астрахань</a><a href="akhtubinsk" title="Жильё посуточно в&nbsp;Ахтубинске  (4)">Ахтубинск</a><a href="achinsk" title="Жильё посуточно в&nbsp;Ачинске  (41)">Ачинск</a><a href="asha" title="Жильё посуточно в&nbsp;Аше  (7)">Аша</a><b>&nbsp;</b><b>Б</b><a href="balakovo" title="Жильё посуточно в&nbsp;Балаково  (92)">Балаково</a><a href="balakhna" title="Жильё посуточно в&nbsp;Балахне  (1)">Балахна</a><a href="balashiha" title="Жильё посуточно в&nbsp;Балашихе  (53)">Балашиха</a><a href="balashov" title="Жильё посуточно в&nbsp;Балашове  (14)">Балашов</a><a href="barnaul" title="Жильё посуточно в&nbsp;Барнауле  (302)">Барнаул</a><a href="barysh" title="Жильё посуточно в&nbsp;Барыше  (1)">Барыш</a><a href="bataysk" title="Жильё посуточно в&nbsp;Батайске  (3)">Батайск</a><a href="belgorod" title="Жильё посуточно в&nbsp;Белгороде  (238)">Белгород</a><a href="belovo" title="Жильё посуточно в&nbsp;Белово  (23)">Белово</a><a href="belogorsk" title="Жильё посуточно в&nbsp;Белогорске  (10)">Белогорск</a><a href="belokuriha" title="Жильё посуточно в&nbsp;Белокурихе  (67)">Белокуриха</a><a href="beloretsk" title="Жильё посуточно в&nbsp;Белорецке  (46)">Белорецк</a><a href="belorechensk" title="Жильё посуточно в&nbsp;Белореченске  (14)">Белореченск</a><a href="beloyarskiy" title="Жильё посуточно в&nbsp;Белоярском  (7)">Белоярский</a><a href="berdsk" title="Жильё посуточно в&nbsp;Бердске  (2)">Бердск</a><a href="berezniki" title="Жильё посуточно в&nbsp;Березниках  (36)">Березники</a><a href="biysk" title="Жильё посуточно в&nbsp;Бийске  (68)">Бийск</a><a href="birobidzhan" title="Жильё посуточно в&nbsp;Биробиджане  (15)">Биробиджан</a><a href="blag" title="Жильё посуточно в&nbsp;Благовещенске  (71)">Благовещенск</a><a href="boguchar" title="Жильё посуточно в&nbsp;Богучаре  (3)">Богучар</a><a href="bor" title="Жильё посуточно на&nbsp;Бору Нижегородской&nbsp;области (2)">Бор</a><a href="borisoglebsk" title="Жильё посуточно в&nbsp;Борисоглебске  (10)">Борисоглебск</a><a href="borovichi" title="Жильё посуточно в&nbsp;Боровичах  (3)">Боровичи</a><a href="bratsk" title="Жильё посуточно в&nbsp;Братске  (130)">Братск</a><a href="bryansk" title="Жильё посуточно в&nbsp;Брянске  (144)">Брянск</a><a href="budennovsk" title="Жильё посуточно в&nbsp;Будённовске  (2)">Будённовск</a><a href="buzuluk" title="Жильё посуточно в&nbsp;Бузулуке  (39)">Бузулук</a><b>&nbsp;</b><b>В</b><a href="velikie-luki" title="Жильё посуточно в&nbsp;Великих&nbsp;Луках  (22)">Великие Луки</a><a href="novgorod" title="Жильё посуточно в&nbsp;Великом&nbsp;Новгороде  (178)">Великий Новгород</a><a href="ustyug" title="Жильё посуточно в&nbsp;Великом&nbsp;Устюге  (87)">Великий Устюг</a><a href="ufaley" title="Жильё посуточно в&nbsp;Верхнем&nbsp;Уфалее  (1)">Верхний Уфалей</a><a href="v-salda" title="Жильё посуточно в&nbsp;Верхней&nbsp;Салде  (3)">Верхняя Салда</a><a href="vesegonsk" title="Жильё посуточно в&nbsp;Весьегонске  (1)">Весьегонск</a><a href="vidnoe" title="Жильё посуточно в&nbsp;Видном  (4)">Видное</a><a href="vl" title="Жильё посуточно во&nbsp;Владивостоке  (125)">Владивосток</a><a href="vladikavkaz" title="Жильё посуточно во&nbsp;Владикавказе  (47)">Владикавказ</a><a href="vladimir" title="Жильё посуточно во&nbsp;Владимире  (157)">Владимир</a><a href="volgograd" title="Жильё посуточно в&nbsp;Волгограде  (431)">Волгоград</a><a href="volgodonsk" title="Жильё посуточно в&nbsp;Волгодонске  (9)">Волгодонск</a><a href="vlz" title="Жильё посуточно в&nbsp;Волжском Волгоградской&nbsp;области (69)">Волжский</a><a href="vologda" title="Жильё посуточно в&nbsp;Вологде  (149)">Вологда</a><a href="vorkuta" title="Жильё посуточно в&nbsp;Воркуте  (64)">Воркута</a><a href="voronezh" title="Жильё посуточно в&nbsp;Воронеже  (491)">Воронеж</a><a href="voskresensk" title="Жильё посуточно в&nbsp;Воскресенске  (8)">Воскресенск</a><a href="votkinsk" title="Жильё посуточно в&nbsp;Воткинске  (1)">Воткинск</a><a href="vsevolozhsk" title="Жильё посуточно во&nbsp;Всеволожске  (5)">Всеволожск</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><a href="vuktyl" title="Жильё посуточно в&nbsp;Вуктыле  (5)">Вуктыл</a><a href="vyborg" title="Жильё посуточно в&nbsp;Выборге  (17)">Выборг</a><a href="vyazma" title="Жильё посуточно в&nbsp;Вязьме  (4)">Вязьма</a><b>&nbsp;</b><b>Г</b><a href="gatchina" title="Жильё посуточно в&nbsp;Гатчине  (7)">Гатчина</a><a href="gelendzhik" title="Жильё посуточно в&nbsp;Геленджике  (101)">Геленджик</a><a href="georgievsk" title="Жильё посуточно в&nbsp;Георгиевске  (2)">Георгиевск</a><a href="glazov" title="Жильё посуточно в&nbsp;Глазове  (33)">Глазов</a><a href="gorno-altaysk" title="Жильё посуточно в&nbsp;Горно-Алтайске  (36)">Горно-Алтайск</a><a href="gornozavodsk" title="Жильё посуточно в&nbsp;Горнозаводске  (2)">Горнозаводск</a><a href="grazi" title="Жильё посуточно в&nbsp;Грязи Липецкой&nbsp;области (2)">Грязи</a><a href="gubaha" title="Жильё посуточно в&nbsp;Губахе  (4)">Губаха</a><a href="gubkin" title="Жильё посуточно в&nbsp;Губкине  (15)">Губкин</a><a href="gubkinskii" title="Жильё посуточно в&nbsp;Губкинском  (8)">Губкинский</a><a href="gus" title="Жильё посуточно в&nbsp;Гусь-Хрустальном  (1)">Гусь-Хрустальный</a><b>&nbsp;</b><b>Д</b><a href="desnogorsk" title="Жильё посуточно в&nbsp;Десногорске  (3)">Десногорск</a><a href="dz" title="Жильё посуточно в&nbsp;Дзержинске Нижегородской&nbsp;области (66)">Дзержинск</a><a href="dimitrovgrad" title="Жильё посуточно в&nbsp;Димитровграде Ульяновской&nbsp;области (31)">Димитровград</a><a href="dmitrov" title="Жильё посуточно в&nbsp;Дмитрове  (16)">Дмитров</a><a href="domodedovo" title="Жильё посуточно в&nbsp;Домодедово  (14)">Домодедово</a><a href="dubna" title="Жильё посуточно в&nbsp;Дубне  (11)">Дубна</a><b>&nbsp;</b><b>Е</b><a href="egoryevsk" title="Жильё посуточно в&nbsp;Егорьевске  (17)">Егорьевск</a><a href="eysk" title="Жильё посуточно в&nbsp;Ейске  (39)">Ейск</a><a href="ekaterinburg" title="Жильё посуточно в&nbsp;Екатеринбурге  (795)">Екатеринбург</a><a href="elets" title="Жильё посуточно в&nbsp;Ельце  (7)">Елец</a><a href="essentuki" title="Жильё посуточно в&nbsp;Ессентуках  (95)">Ессентуки</a><b>&nbsp;</b><b>Ж</b><a href="zheleznovodsk" title="Жильё посуточно в&nbsp;Железноводске  (99)">Железноводск</a><a href="zheleznogorsk" title="Жильё посуточно в&nbsp;Железногорске Красноярского&nbsp;края (37)">Железногорск</a><a href="zheleznogorsk-kursk" title="Жильё посуточно в&nbsp;Железногорске Курской&nbsp;области (12)">Железногорск</a><a href="zheldor" title="Жильё посуточно в&nbsp;Железнодорожном  (11)">Железнодорожный</a><a href="zhukovskiy" title="Жильё посуточно в&nbsp;Жуковском  (5)">Жуковский</a><b>&nbsp;</b><b>З</b><a href="zavodoukovsk" title="Жильё посуточно в&nbsp;Заводоуковске  (2)">Заводоуковск</a><a href="zarinsk" title="Жильё посуточно в&nbsp;Заринске  (3)">Заринск</a><a href="zelenogorsk" title="Жильё посуточно в&nbsp;Зеленогорске Красноярского&nbsp;края (30)">Зеленогорск</a><a href="zelenogorsk-spb" title="Жильё посуточно в&nbsp;Зеленогорске в&nbsp;составе&nbsp;Курортного&nbsp;района&nbsp;Санкт-Петербурга (2)">Зеленогорск</a><a href="zelenograd" title="Жильё посуточно в&nbsp;Зеленограде  (5)">Зеленоград</a><a href="zelenogradsk" title="Жильё посуточно в&nbsp;Зеленоградске  (18)">Зеленоградск</a><a href="zelenodolsk" title="Жильё посуточно в&nbsp;Зеленодольске  (8)">Зеленодольск</a><a href="zima" title="Жильё посуточно в&nbsp;Зиме  (2)">Зима</a><a href="zlatoust" title="Жильё посуточно в&nbsp;Златоусте  (46)">Златоуст</a><b>&nbsp;</b><b>И</b><a href="ivanovo" title="Жильё посуточно в&nbsp;Иваново  (183)">Иваново</a><a href="izhevsk" title="Жильё посуточно в&nbsp;Ижевске  (226)">Ижевск</a><a href="inta" title="Жильё посуточно в&nbsp;Инте  (9)">Инта</a><a href="irkutsk" title="Жильё посуточно в&nbsp;Иркутске  (585)">Иркутск</a><a href="iskitim" title="Жильё посуточно в&nbsp;Искитиме  (1)">Искитим</a><a href="istra" title="Жильё посуточно в&nbsp;Истре  (2)">Истра</a><a href="ishim" title="Жильё посуточно в&nbsp;Ишиме  (9)">Ишим</a><b>&nbsp;</b><b>Й</b><a href="yoshkar-ola" title="Жильё посуточно в&nbsp;Йошкар-Оле  (51)">Йошкар-Ола</a><b>&nbsp;</b><b>К</b><a href="kazan" title="Жильё посуточно в&nbsp;Казани  (869)">Казань</a><a href="kaliningrad" title="Жильё посуточно в&nbsp;Калининграде  (234)">Калининград</a><a href="kaluga" title="Жильё посуточно в&nbsp;Калуге  (105)">Калуга</a><a href="ku" title="Жильё посуточно в&nbsp;Каменске-Уральском  (57)">Каменск-Уральский</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><a href="kamyshin" title="Жильё посуточно в&nbsp;Камышине  (21)">Камышин</a><a href="kansk" title="Жильё посуточно в&nbsp;Канске  (42)">Канск</a><a href="kashira" title="Жильё посуточно в&nbsp;Кашире  (1)">Кашира</a><a href="kemerovo" title="Жильё посуточно в&nbsp;Кемерово  (331)">Кемерово</a><a href="karelia-kem" title="Жильё посуточно в&nbsp;Кеми Республики&nbsp;Карелия (5)">Кемь</a><a href="kineshma" title="Жильё посуточно в&nbsp;Кинешме  (4)">Кинешма</a><a href="kirov" title="Жильё посуточно в&nbsp;Кирове  (260)">Киров</a><a href="kirovsk" title="Жильё посуточно в&nbsp;Кировске Мурманской&nbsp;области (36)">Кировск</a><a href="kiselevsk" title="Жильё посуточно в&nbsp;Киселёвске  (2)">Киселёвск</a><a href="kislovodsk" title="Жильё посуточно в&nbsp;Кисловодске  (293)">Кисловодск</a><a href="klin" title="Жильё посуточно в&nbsp;Клину  (6)">Клин</a><a href="kovrov" title="Жильё посуточно в&nbsp;Коврове  (3)">Ковров</a><a href="kogalym" title="Жильё посуточно в&nbsp;Когалыме  (30)">Когалым</a><a href="kodinsk" title="Жильё посуточно в&nbsp;Кодинске  (1)">Кодинск</a><a href="kolomna" title="Жильё посуточно в&nbsp;Коломне  (34)">Коломна</a><a href="kolpino" title="Жильё посуточно в&nbsp;Колпино  (17)">Колпино</a><a href="kolchugino" title="Жильё посуточно в&nbsp;Кольчугино  (8)">Кольчугино</a><a href="kms" title="Жильё посуточно в&nbsp;Комсомольске-на-Амуре  (94)">Комсомольск-на-Амуре</a><a href="kopeysk" title="Жильё посуточно в&nbsp;Копейске  (23)">Копейск</a><a href="korkino" title="Жильё посуточно в&nbsp;Коркино  (3)">Коркино</a><a href="korolev" title="Жильё посуточно в&nbsp;Королёве  (12)">Королёв</a><a href="kostomuksha" title="Жильё посуточно в&nbsp;Костомукше  (9)">Костомукша</a><a href="kostroma" title="Жильё посуточно в&nbsp;Костроме  (101)">Кострома</a><a href="kotlas" title="Жильё посуточно в&nbsp;Котласе  (18)">Котлас</a><a href="krasnogorsk" title="Жильё посуточно в&nbsp;Красногорске Московской&nbsp;области (23)">Красногорск</a><a href="krasnodar" title="Жильё посуточно в&nbsp;Краснодаре  (495)">Краснодар</a><a href="krasnokamsk" title="Жильё посуточно в&nbsp;Краснокамске  (6)">Краснокамск</a><a href="krasnoyarsk" title="Жильё посуточно в&nbsp;Красноярске  (1099)">Красноярск</a><a href="kropotkin" title="Жильё посуточно в&nbsp;Кропоткине  (5)">Кропоткин</a><a href="kstovo" title="Жильё посуточно в&nbsp;Кстово  (6)">Кстово</a><a href="kungur" title="Жильё посуточно в&nbsp;Кунгуре  (3)">Кунгур</a><a href="kurgan" title="Жильё посуточно в&nbsp;Кургане  (159)">Курган</a><a href="kurganinsk" title="Жильё посуточно в&nbsp;Курганинске  (1)">Курганинск</a><a href="kursk" title="Жильё посуточно в&nbsp;Курске  (165)">Курск</a><a href="kurchatov" title="Жильё посуточно в&nbsp;Курчатове  (4)">Курчатов</a><a href="kyzyl" title="Жильё посуточно в&nbsp;Кызыле  (18)">Кызыл</a><a href="kyshtym" title="Жильё посуточно в&nbsp;Кыштыме  (1)">Кыштым</a><b>&nbsp;</b><b>Л</b><a href="labinsk" title="Жильё посуточно в&nbsp;Лабинске  (5)">Лабинск</a><a href="langepas" title="Жильё посуточно в&nbsp;Лангепасе  (4)">Лангепас</a><a href="leninogorsk" title="Жильё посуточно в&nbsp;Лениногорске  (1)">Лениногорск</a><a href="leninsk-kuz" title="Жильё посуточно в&nbsp;Ленинске-Кузнецком  (6)">Ленинск-Кузнецкий</a><a href="lesosibirsk" title="Жильё посуточно в&nbsp;Лесосибирске  (13)">Лесосибирск</a><a href="lipetsk" title="Жильё посуточно в&nbsp;Липецке  (106)">Липецк</a><a href="lobnya" title="Жильё посуточно в&nbsp;Лобне  (8)">Лобня</a><a href="luhovici" title="Жильё посуточно в&nbsp;Луховицах  (1)">Луховицы</a><a href="lysva" title="Жильё посуточно в&nbsp;Лысьве  (8)">Лысьва</a><a href="lytkarino" title="Жильё посуточно в&nbsp;Лыткарино  (1)">Лыткарино</a><a href="lubercy" title="Жильё посуточно в&nbsp;Люберцах  (23)">Люберцы</a><b>&nbsp;</b><b>М</b><a href="magadan" title="Жильё посуточно в&nbsp;Магадане  (30)">Магадан</a><a href="magnitogorsk" title="Жильё посуточно в&nbsp;Магнитогорске  (203)">Магнитогорск</a><a href="maykop" title="Жильё посуточно в&nbsp;Майкопе  (23)">Майкоп</a><a href="mahachkala" title="Жильё посуточно в&nbsp;Махачкале  (31)">Махачкала</a><a href="megion" title="Жильё посуточно в&nbsp;Мегионе  (7)">Мегион</a><a href="mezhdurechensk" title="Жильё посуточно в&nbsp;Междуреченске Кемеровской&nbsp;области (11)">Междуреченск</a><a href="miass" title="Жильё посуточно в&nbsp;Миассе  (58)">Миасс</a><a href="mikun" title="Жильё посуточно в&nbsp;Микуни  (8)">Микунь</a><a href="mineralnye-vody" title="Жильё посуточно в&nbsp;Минеральных&nbsp;Водах  (13)">Минеральные Воды</a><a href="minusinsk" title="Жильё посуточно в&nbsp;Минусинске  (4)">Минусинск</a><a href="mirnii" title="Жильё посуточно в&nbsp;Мирном  (5)">Мирный</a><a href="mihailovka" title="Жильё посуточно в&nbsp;Михайловке  (1)">Михайловка</a><a href="monchegorsk" title="Жильё посуточно в&nbsp;Мончегорске  (15)">Мончегорск</a><a href="www" title="Жильё посуточно в&nbsp;Москве  (2081)">Москва</a><a href="moskovskiy" title="Жильё посуточно в&nbsp;Московском  (1)">Московский</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><a href="muravlenko" title="Жильё посуточно в&nbsp;Муравленко  (3)">Муравленко</a><a href="murmansk" title="Жильё посуточно в&nbsp;Мурманске  (101)">Мурманск</a><a href="murom" title="Жильё посуточно в&nbsp;Муроме  (49)">Муром</a><a href="myski" title="Жильё посуточно в&nbsp;Мысках  (1)">Мыски</a><a href="mytischi" title="Жильё посуточно в&nbsp;Мытищах  (14)">Мытищи</a><b>&nbsp;</b><b>Н</b><a href="chelny" title="Жильё посуточно в&nbsp;Набережных&nbsp;Челнах  (144)">Набережные Челны</a><a href="nadym" title="Жильё посуточно в&nbsp;Надыме  (16)">Надым</a><a href="nazarovo" title="Жильё посуточно в&nbsp;Назарово  (15)">Назарово</a><a href="nalchik" title="Жильё посуточно в&nbsp;Нальчике  (14)">Нальчик</a><a href="naro-fominsk" title="Жильё посуточно в&nbsp;Наро-Фоминске  (3)">Наро-Фоминск</a><a href="nakhodka" title="Жильё посуточно в&nbsp;Находке  (14)">Находка</a><a href="nevinka" title="Жильё посуточно в&nbsp;Невинномысске  (3)">Невинномысск</a><a href="nerungri" title="Жильё посуточно в&nbsp;Нерюнгри республики&nbsp;Саха&nbsp;(Якутия) (15)">Нерюнгри</a><a href="neftekamsk" title="Жильё посуточно в&nbsp;Нефтекамске  (17)">Нефтекамск</a><a href="nefteyugansk" title="Жильё посуточно в&nbsp;Нефтеюганске  (54)">Нефтеюганск</a><a href="nv" title="Жильё посуточно в&nbsp;Нижневартовске  (300)">Нижневартовск</a><a href="nizhnekamsk" title="Жильё посуточно в&nbsp;Нижнекамске  (74)">Нижнекамск</a><a href="nn" title="Жильё посуточно в&nbsp;Нижнем&nbsp;Новгороде  (652)">Нижний Новгород</a><a href="tagil" title="Жильё посуточно в&nbsp;Нижнем&nbsp;Тагиле  (77)">Нижний Тагил</a><a href="novokuznetsk" title="Жильё посуточно в&nbsp;Новокузнецке  (227)">Новокузнецк</a><a href="novokuybyshevsk" title="Жильё посуточно в&nbsp;Новокуйбышевске  (5)">Новокуйбышевск</a><a href="novomoskovsk" title="Жильё посуточно в&nbsp;Новомосковске  (14)">Новомосковск</a><a href="nr" title="Жильё посуточно в&nbsp;Новороссийске  (54)">Новороссийск</a><a href="ns" title="Жильё посуточно в&nbsp;Новосибирске  (745)">Новосибирск</a><a href="novotroitsk" title="Жильё посуточно в&nbsp;Новотроицке  (14)">Новотроицк</a><a href="novocheb" title="Жильё посуточно в&nbsp;Новочебоксарске  (21)">Новочебоксарск</a><a href="novocherkassk" title="Жильё посуточно в&nbsp;Новочеркасске  (36)">Новочеркасск</a><a href="novoshahtinsk" title="Жильё посуточно в&nbsp;Новошахтинске  (1)">Новошахтинск</a><a href="noviyurengoy" title="Жильё посуточно в&nbsp;Новом&nbsp;Уренгое  (27)">Новый Уренгой</a><a href="noginsk" title="Жильё посуточно в&nbsp;Ногинске  (2)">Ногинск</a><a href="norilsk" title="Жильё посуточно в&nbsp;Норильске  (23)">Норильск</a><a href="noyabrsk" title="Жильё посуточно в&nbsp;Ноябрьске  (34)">Ноябрьск</a><a href="nyagan" title="Жильё посуточно в&nbsp;Нягани  (18)">Нягань</a><a href="nyandoma" title="Жильё посуточно в&nbsp;Няндоме  (7)">Няндома</a><b>&nbsp;</b><b>О</b><a href="obninsk" title="Жильё посуточно в&nbsp;Обнинске  (31)">Обнинск</a><a href="odintsovo" title="Жильё посуточно в&nbsp;Одинцово  (18)">Одинцово</a><a href="ozersk" title="Жильё посуточно в&nbsp;Озёрске Челябинской&nbsp;области (7)">Озёрск</a><a href="oktyabrskiy" title="Жильё посуточно в&nbsp;Октябрьском Республики&nbsp;Башкортостан (21)">Октябрьский</a><a href="omsk" title="Жильё посуточно в&nbsp;Омске  (424)">Омск</a><a href="orel" title="Жильё посуточно в&nbsp;Орле  (185)">Орёл</a><a href="orenburg" title="Жильё посуточно в&nbsp;Оренбурге  (185)">Оренбург</a><a href="oz" title="Жильё посуточно в&nbsp;Орехово-Зуево  (22)">Орехово-Зуево</a><a href="orsk" title="Жильё посуточно в&nbsp;Орске  (19)">Орск</a><b>&nbsp;</b><b>П</b><a href="pavlovo" title="Жильё посуточно в&nbsp;Павлово  (7)">Павлово</a><a href="pavlovskiy-posad" title="Жильё посуточно в&nbsp;Павловском&nbsp;Посаде  (1)">Павловский Посад</a><a href="penza" title="Жильё посуточно в&nbsp;Пензе  (299)">Пенза</a><a href="pervouralsk" title="Жильё посуточно в&nbsp;Первоуральске  (17)">Первоуральск</a><a href="pereslavl" title="Жильё посуточно в&nbsp;Переславле-Залесском  (29)">Переславль-Залесский</a><a href="perm" title="Жильё посуточно в&nbsp;Перми  (460)">Пермь</a><a href="petergof" title="Жильё посуточно в&nbsp;Петергоф  (21)">Петергоф</a><a href="petrozavodsk" title="Жильё посуточно в&nbsp;Петрозаводске  (89)">Петрозаводск</a><a href="pk" title="Жильё посуточно в&nbsp;Петропавловске-Камчатском  (64)">Петропавловск-Камчатский</a><a href="pechora" title="Жильё посуточно в&nbsp;Печоре  (9)">Печора</a><a href="ples" title="Жильё посуточно в&nbsp;Плёсе  (7)">Плёс</a><a href="podolsk" title="Жильё посуточно в&nbsp;Подольске  (60)">Подольск</a><a href="polisaevo" title="Жильё посуточно в&nbsp;Полысаево  (1)">Полысаево</a><a href="polarzori" title="Жильё посуточно в&nbsp;Полярных&nbsp;Зорях  (2)">Полярные Зори</a><a href="pahtarsk" title="Жильё посуточно в&nbsp;Приморско-Ахтарске  (1)">Приморско-Ахтарск</a><a href="prokopevsk" title="Жильё посуточно в&nbsp;Прокопьевске  (12)">Прокопьевск</a><a href="pskov" title="Жильё посуточно в&nbsp;Пскове  (102)">Псков</a><a href="pushkin" title="Жильё посуточно в&nbsp;Пушкине  (19)">Пушкин</a><a href="pyatigorsk" title="Жильё посуточно в&nbsp;Пятигорске  (126)">Пятигорск</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Р</b><a href="ramenskoe" title="Жильё посуточно в&nbsp;Раменском  (8)">Раменское</a><a href="reutov" title="Жильё посуточно в&nbsp;Реутове Московской&nbsp;области (2)">Реутов</a><a href="rzhev" title="Жильё посуточно в&nbsp;Ржеве  (2)">Ржев</a><a href="rossosh" title="Жильё посуточно Россоши  (1)">Россошь</a><a href="rostov-velikiy" title="Жильё посуточно в&nbsp;Ростове  (3)">Ростов</a><a href="rostov" title="Жильё посуточно в&nbsp;Ростове-на-Дону  (453)">Ростов-на-Дону</a><a href="rubtsovsk" title="Жильё посуточно в&nbsp;Рубцовске  (17)">Рубцовск</a><a href="rybinsk" title="Жильё посуточно в&nbsp;Рыбинске  (49)">Рыбинск</a><a href="rzn" title="Жильё посуточно в&nbsp;Рязани  (135)">Рязань</a><b>&nbsp;</b><b>С</b><a href="salavat" title="Жильё посуточно в&nbsp;Салавате  (41)">Салават</a><a href="salehard" title="Жильё посуточно в&nbsp;Салехарде  (10)">Салехард</a><a href="samara" title="Жильё посуточно в&nbsp;Самаре  (372)">Самара</a><a href="spb" title="Жильё посуточно в&nbsp;Санкт-Петербурге  (2245)">Санкт-Петербург</a><a href="saransk" title="Жильё посуточно в&nbsp;Саранске  (213)">Саранск</a><a href="sarapul" title="Жильё посуточно в&nbsp;Сарапуле  (16)">Сарапул</a><a href="saratov" title="Жильё посуточно в&nbsp;Саратове  (308)">Саратов</a><a href="sarov" title="Жильё посуточно в&nbsp;Сарове  (2)">Саров</a><a href="satka" title="Жильё посуточно в&nbsp;Сатке  (11)">Сатка</a><a href="sayanogorsk" title="Жильё посуточно в&nbsp;Саяногорске  (18)">Саяногорск</a><a href="sayansk" title="Жильё посуточно в&nbsp;Саянске  (10)">Саянск</a><a href="svetlogorsk" title="Жильё посуточно в&nbsp;Светлогорске  (28)">Светлогорск</a><a href="severodvinsk" title="Жильё посуточно в&nbsp;Северодвинске  (65)">Северодвинск</a><a href="seversk" title="Жильё посуточно в&nbsp;Северске  (1)">Северск</a><a href="sergiev-posad" title="Жильё посуточно в&nbsp;Сергиевом&nbsp;Посаде  (13)">Сергиев Посад</a><a href="serov" title="Жильё посуточно в&nbsp;Серове Свердловской&nbsp;области (40)">Серов</a><a href="serpuhov" title="Жильё посуточно в&nbsp;Серпухове  (16)">Серпухов</a><a href="smolensk" title="Жильё посуточно в&nbsp;Смоленске  (213)">Смоленск</a><a href="snezhinsk" title="Жильё посуточно в&nbsp;Снежинске  (1)">Снежинск</a><a href="sovgav" title="Жильё посуточно в&nbsp;Советской&nbsp;Гавани  (5)">Советская Гавань</a><a href="sovetski" title="Жильё посуточно в&nbsp;Советском  (4)">Советский</a><a href="solikamsk" title="Жильё посуточно в&nbsp;Соликамске  (5)">Соликамск</a><a href="sochi" title="Жильё посуточно в&nbsp;Сочи  (520)">Сочи</a><a href="stavropol" title="Жильё посуточно в&nbsp;Ставрополе  (158)">Ставрополь</a><a href="oskol" title="Жильё посуточно в&nbsp;Старом&nbsp;Осколе  (81)">Старый Оскол</a><a href="sterlitamak" title="Жильё посуточно в&nbsp;Стерлитамаке  (68)">Стерлитамак</a><a href="stupino" title="Жильё посуточно в&nbsp;Ступино  (6)">Ступино</a><a href="suzdal" title="Жильё посуточно в&nbsp;Суздале  (61)">Суздаль</a><a href="surgut" title="Жильё посуточно в&nbsp;Сургуте  (279)">Сургут</a><a href="suchoilog" title="Жильё посуточно в&nbsp;Сухом&nbsp;Логе  (6)">Сухой Лог</a><a href="syzran" title="Жильё посуточно в&nbsp;Сызрани  (45)">Сызрань</a><a href="syktyvkar" title="Жильё посуточно в&nbsp;Сыктывкаре  (156)">Сыктывкар</a><b>&nbsp;</b><b>Т</b><a href="taganrog" title="Жильё посуточно в&nbsp;Таганроге  (86)">Таганрог</a><a href="tambov" title="Жильё посуточно в&nbsp;Тамбове  (71)">Тамбов</a><a href="tarkosale" title="Жильё посуточно в&nbsp;Тарко-Сале  (7)">Тарко-Сале</a><a href="tver" title="Жильё посуточно в&nbsp;Твери  (161)">Тверь</a><a href="teykovo" title="Жильё посуточно в&nbsp;Тейково  (12)">Тейково</a><a href="tihoretsk" title="Жильё посуточно в&nbsp;Тихорецке  (13)">Тихорецк</a><a href="tobolsk" title="Жильё посуточно в&nbsp;Тобольске  (55)">Тобольск</a><a href="tol" title="Жильё посуточно в&nbsp;Тольятти  (193)">Тольятти</a><a href="tomsk" title="Жильё посуточно в&nbsp;Томске  (365)">Томск</a><a href="troitsk" title="Жильё посуточно в&nbsp;Троицке Челябинской&nbsp;области (20)">Троицк</a><a href="tuapse" title="Жильё посуточно в&nbsp;Туапсе  (15)">Туапсе</a><a href="tuimazy" title="Жильё посуточно в&nbsp;Туймазах  (29)">Туймазы</a><a href="tula" title="Жильё посуточно в&nbsp;Туле  (158)">Тула</a><a href="tulun" title="Жильё посуточно в&nbsp;Тулуне  (8)">Тулун</a><a href="tyumen" title="Жильё посуточно в&nbsp;Тюмени  (514)">Тюмень</a><b>&nbsp;</b><b>У</b><a href="uglich" title="Жильё посуточно в&nbsp;Угличе  (7)">Углич</a><a href="ulan-ude" title="Жильё посуточно в&nbsp;Улан-Удэ  (111)">Улан-Удэ</a><a href="ul" title="Жильё посуточно в&nbsp;Ульяновске  (259)">Ульяновск</a><a href="urupinsk" title="Жильё посуточно в&nbsp;Урюпинске  (2)">Урюпинск</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><a href="usinsk" title="Жильё посуточно в&nbsp;Усинске  (30)">Усинск</a><a href="usolye-sibirskoe" title="Жильё посуточно в&nbsp;Усолье-Сибирском  (8)">Усолье-Сибирское</a><a href="ussur" title="Жильё посуточно в&nbsp;Уссурийске  (11)">Уссурийск</a><a href="ust-ilimsk" title="Жильё посуточно в&nbsp;Усть-Илимске  (16)">Усть-Илимск</a><a href="ustkut" title="Жильё посуточно в&nbsp;Усть-Куте  (2)">Усть-Кут</a><a href="ust-labinsk" title="Жильё посуточно в&nbsp;Усть-Лабинске  (1)">Усть-Лабинск</a><a href="ufa" title="Жильё посуточно в&nbsp;Уфе  (783)">Уфа</a><a href="uhta" title="Жильё посуточно в&nbsp;Ухте Республики&nbsp;Коми (84)">Ухта</a><a href="uchaly" title="Жильё посуточно в&nbsp;Учалах  (9)">Учалы</a><b>&nbsp;</b><b>Х</b><a href="habarovsk" title="Жильё посуточно в&nbsp;Хабаровске  (410)">Хабаровск</a><a href="hm" title="Жильё посуточно в&nbsp;Ханты-Мансийске  (61)">Ханты-Мансийск</a><a href="himki" title="Жильё посуточно в&nbsp;Химках  (30)">Химки</a><b>&nbsp;</b><b>Ч</b><a href="chaykovskiy" title="Жильё посуточно в&nbsp;Чайковском  (14)">Чайковский</a><a href="chapaevsk" title="Жильё посуточно в&nbsp;Чапаевске Самарской&nbsp;области (7)">Чапаевск</a><a href="chebarkul" title="Жильё посуточно в&nbsp;Чебаркуле  (6)">Чебаркуль</a><a href="cheb" title="Жильё посуточно в&nbsp;Чебоксарах  (195)">Чебоксары</a><a href="chel" title="Жильё посуточно в&nbsp;Челябинске  (392)">Челябинск</a><a href="cheremhovo" title="Жильё посуточно в&nbsp;Черемхово  (4)">Черемхово</a><a href="cher" title="Жильё посуточно в&nbsp;Череповце  (99)">Череповец</a><a href="cherkessk" title="Жильё посуточно в&nbsp;Черкесске  (10)">Черкесск</a><a href="chernogorsk" title="Жильё посуточно в&nbsp;Черногорске  (4)">Черногорск</a><a href="chehov" title="Жильё посуточно в&nbsp;Чехове  (5)">Чехов</a><a href="chita" title="Жильё посуточно в&nbsp;Чите  (96)">Чита</a><b>&nbsp;</b><b>Ш</b><a href="shadrinsk" title="Жильё посуточно в&nbsp;Шадринске  (11)">Шадринск</a><a href="shahty" title="Жильё посуточно в&nbsp;Шахтах  (9)">Шахты</a><a href="shebekino" title="Жильё посуточно в&nbsp;Шебекино  (1)">Шебекино</a><a href="shelehov" title="Жильё посуточно в&nbsp;Шелехове  (14)">Шелехов</a><a href="shuya" title="Жильё посуточно в&nbsp;Шуе  (5)">Шуя</a><b>&nbsp;</b><b>Щ</b><a href="schelkovo" title="Жильё посуточно в&nbsp;Щёлково Московской&nbsp;области (19)">Щёлково</a><b>&nbsp;</b><b>Э</b><a href="elektrostal" title="Жильё посуточно в&nbsp;Электростали  (10)">Электросталь</a><a href="elista" title="Жильё посуточно в&nbsp;Элисте  (19)">Элиста</a><a href="engels" title="Жильё посуточно в&nbsp;Энгельсе Саратовской&nbsp;области (56)">Энгельс</a><b>&nbsp;</b><b>Ю</b><a href="yugorsk" title="Жильё посуточно в&nbsp;Югорске  (9)">Югорск</a><a href="sakhalin" title="Жильё посуточно в&nbsp;Южно-Сахалинске  (44)">Южно-Сахалинск</a><a href="yuzhnouralsk" title="Жильё посуточно в&nbsp;Южноуральске  (7)">Южноуральск</a><b>&nbsp;</b><b>Я</b><a href="yakutsk" title="Жильё посуточно в&nbsp;Якутске  (60)">Якутск</a><a href="yar" title="Жильё посуточно в&nbsp;Ярославле  (396)">Ярославль</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-2 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448938104105500.jpg" alt="">Украина</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>А</b><a href="alushta" title="Жильё посуточно в&nbsp;Алуште  (8)">Алушта</a><b>&nbsp;</b><b>Б</b><a href="bc" title="Жильё посуточно в&nbsp;Белой&nbsp;Церкви  (21)">Белая Церковь</a><b>&nbsp;</b><b>В</b><a href="vinnica" title="Жильё посуточно в&nbsp;Виннице  (2)">Винница</a><b>&nbsp;</b><b>Д</b><a href="dnepropetrovsk" title="Жильё посуточно в&nbsp;Днепропетровске  (15)">Днепропетровск</a><a href="dneprorudnoe" title="Жильё посуточно в&nbsp;Днепрорудном  (2)">Днепрорудное</a><a href="donetsk" title="Жильё посуточно в&nbsp;Донецке  (59)">Донецк</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Е</b><a href="evpatoria" title="Жильё посуточно в&nbsp;Евпатории  (2)">Евпатория</a><b>&nbsp;</b><b>Ж</b><a href="zhitomir" title="Жильё посуточно в&nbsp;Житомире  (1)">Житомир</a><b>&nbsp;</b><b>З</b><a href="zp" title="Жильё посуточно в&nbsp;Запорожье  (1)">Запорожье</a><b>&nbsp;</b><b>И</b><a href="if" title="Жильё посуточно в&nbsp;Ивано-Франковске  (1)">Ивано-Франковск</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>К</b><a href="k-p" title="Жильё посуточно в&nbsp;Каменце-Подольском  (7)">Каменец-Подольский</a><a href="kerch" title="Жильё посуточно в&nbsp;Керчи  (9)">Керчь</a><a href="kiev" title="Жильё посуточно в&nbsp;Киеве  (268)">Киев</a><a href="koktebel" title="Жильё посуточно в&nbsp;Коктебеле  (1)">Коктебель</a><a href="kramatorsk" title="Жильё посуточно в&nbsp;Краматорске  (8)">Краматорск</a><a href="krivoyrog" title="Жильё посуточно в&nbsp;Кривом&nbsp;Роге  (2)">Кривой Рог</a><b>&nbsp;</b><b>Л</b><a href="lugansk" title="Жильё посуточно в&nbsp;Луганске  (9)">Луганск</a><a href="lvov" title="Жильё посуточно во&nbsp;Львове  (62)">Львов</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>М</b><a href="mariupol" title="Жильё посуточно в&nbsp;Мариуполе  (6)">Мариуполь</a><b>&nbsp;</b><b>Н</b><a href="nikolaev" title="Жильё посуточно в&nbsp;Николаеве  (38)">Николаев</a><b>&nbsp;</b><b>О</b><a href="odessa" title="Жильё посуточно в&nbsp;Одессе  (536)">Одесса</a><b>&nbsp;</b><b>П</b><a href="poltava" title="Жильё посуточно в&nbsp;Полтаве  (48)">Полтава</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>С</b><a href="sevastopol" title="Жильё посуточно в&nbsp;Севастополе  (251)">Севастополь</a><a href="simferopol" title="Жильё посуточно в&nbsp;Симферополе  (4)">Симферополь</a><a href="sudak" title="Жильё посуточно в&nbsp;Судаке  (3)">Судак</a><a href="sumy" title="Жильё посуточно в&nbsp;Сумах  (7)">Сумы</a><b>&nbsp;</b><b>Ф</b><a href="feodosia" title="Жильё посуточно в&nbsp;Феодосии  (204)">Феодосия</a><b>&nbsp;</b><b>Х</b><a href="kharkov" title="Жильё посуточно в&nbsp;Харькове  (165)">Харьков</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Ч</b><a href="chernigov" title="Жильё посуточно в&nbsp;Чернигове  (9)">Чернигов</a><b>&nbsp;</b><b>Я</b><a href="yalta" title="Жильё посуточно в&nbsp;Ялте  (67)">Ялта</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-4 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448939407569400.jpg" alt="">Беларусь</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="baranovichi" title="Жильё посуточно в&nbsp;Барановичах  (8)">Барановичи</a><a href="bobruisk" title="Жильё посуточно в&nbsp;Бобруйске  (12)">Бобруйск</a><a href="borisov" title="Жильё посуточно в&nbsp;Борисове  (19)">Борисов</a><a href="brest" title="Жильё посуточно в&nbsp;Бресте  (109)">Брест</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>В</b><a href="vitebsk" title="Жильё посуточно в&nbsp;Витебске  (40)">Витебск</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Г</b><a href="gomel" title="Жильё посуточно в&nbsp;Гомеле  (54)">Гомель</a><a href="grodno" title="Жильё посуточно в&nbsp;Гродно  (54)">Гродно</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>М</b><a href="minsk" title="Жильё посуточно в&nbsp;Минске  (417)">Минск</a><a href="mogilev" title="Жильё посуточно в&nbsp;Могилеве  (11)">Могилев</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="pinsk" title="Жильё посуточно в&nbsp;Пинске  (6)">Пинск</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-6 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448941644740300.jpg" alt="">Казахстан</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>А</b><a href="alma_ata" title="Жильё посуточно в&nbsp;Алматы  (1)">Алматы</a><a href="astana" title="Жильё посуточно в&nbsp;Астане  (14)">Астана</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>К</b><a href="karaganda" title="Жильё посуточно в&nbsp;Караганде  (7)">Караганда</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-16 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137604170862376300.png" alt="">Абхазия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Г</b><a href="gagra" title="Жильё посуточно в&nbsp;Гагре  (1)">Гагра</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>С</b><a href="suhumi" title="Жильё посуточно в&nbsp;Сухуми  (4)">Сухуми</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-8 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448944044678600.jpg" alt="">Австрия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>В</b><a href="vena" title="Жильё посуточно в&nbsp;Вене  (1)">Вена</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-15 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137898080153656400.jpg" alt="">Азербайджан</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="baku" title="Жильё посуточно в&nbsp;Баку  (12)">Баку</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-11 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448947572559100.jpg" alt="">Армения</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Е</b><a href="erevan" title="Жильё посуточно в&nbsp;Ереване  (17)">Ереван</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-5 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448948874280000.jpg" alt="">Болгария</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="burgas" title="Жильё посуточно в&nbsp;Бургасе  (2)">Бургас</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="pomorie" title="Жильё посуточно в&nbsp;Поморие  (4)">Поморие</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>С</b><a href="sv_vlas" title="Жильё посуточно в&nbsp;Святом&nbsp;Власе  (7)">Святой Влас</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-7 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448950199379500.jpg" alt="">Германия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="berlin" title="Жильё посуточно в&nbsp;Берлине  (1)">Берлин</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Д</b><a href="dusseldorf" title="Жильё посуточно в&nbsp;Дюссельдорфе  (10)">Дюссельдорф</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>М</b><a href="munich" title="Жильё посуточно в&nbsp;Мюнхене  (1)">Мюнхен</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Ф</b><a href="frankfurt" title="Жильё посуточно во&nbsp;Франкфурте  (1)">Франкфурт</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-17 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137604182707447000.jpg" alt="">Греция</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>И</b><a href="heraklion" title="Жильё посуточно в&nbsp;Ираклионе  (1)">Ираклион</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>С</b><a href="saloniki" title="Жильё посуточно в&nbsp;Салониках  (3)">Салоники</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Х</b><a href="hanya" title="Жильё посуточно в&nbsp;Ханье  (2)">Ханья</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-24 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137959720119114800.jpg" alt="">Израиль</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Г</b><a href="herzliya" title="Жильё посуточно в&nbsp;Герцлии  (1)">Герцлия</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Т</b><a href="tel-aviv" title="Жильё посуточно в&nbsp;Тель-Авиве  (27)">Тель-Авив</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Э</b><a href="eilat" title="Жильё посуточно в&nbsp;Эйлате  (1)">Эйлат</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-23 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137890277848847500.png" alt="">Испания</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>А</b><a href="altea" title="Жильё посуточно в&nbsp;Альтее  (2)">Альтеа</a><b>&nbsp;</b><b>Б</b><a href="barselona" title="Жильё посуточно в&nbsp;Барселоне  (13)">Барселона</a><a href="benidorm" title="Жильё посуточно в&nbsp;Бенидорме  (3)">Бенидорм</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>К</b><a href="kalpe" title="Жильё посуточно в&nbsp;Кальпе  (1)">Кальпе</a><b>&nbsp;</b><b>Л</b><a href="los-kristianos" title="Жильё посуточно в&nbsp;Лос-Кристианос  (1)">Лос-Кристианос</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="las-amerikas" title="Жильё посуточно в&nbsp;Плайя-де-лас-Америкас  (1)">Плайя-де-лас-Америкас</a><b>&nbsp;</b><b>С</b><a href="san-eugenio" title="Жильё посуточно в&nbsp;Сан&nbsp;Евгенио  (1)">Сан Евгенио</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Т</b><a href="torviskas" title="Жильё посуточно в&nbsp;Торвискас  (1)">Торвискас</a><a href="torrevieha" title="Жильё посуточно в&nbsp;Торревьехе  (1)">Торревьеха</a><b>&nbsp;</b><b>Э</b><a href="el-duke" title="Жильё посуточно в&nbsp;Эль&nbsp;Дуке  (1)">Эль Дуке</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-21 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137604154746717300.gif" alt="">Италия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Ф</b><a href="florencia" title="Жильё посуточно во&nbsp;Флоренции  (3)">Флоренция</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-18 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137604176447271100.png" alt="">Кипр</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Л</b><a href="larnaka" title="Жильё посуточно в&nbsp;Ларнаке  (1)">Ларнака</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Н</b><a href="nikosiya" title="Жильё посуточно в&nbsp;Никосии  (1)">Никосия</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="pafos" title="Жильё посуточно в&nbsp;Пафосе  (13)">Пафос</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-28 clearfix">
+				<label class="header-country"><img src="images/countries/flags/138633599075798500.png" alt="">Кыргызстан</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="bishkek" title="Жильё посуточно в&nbsp;Бишкеке  (1)">Бишкек</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-13 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448953239237300.jpg" alt="">Латвия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Р</b><a href="riga" title="Жильё посуточно в&nbsp;Риге  (4)">Рига</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-12 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448954757663000.jpg" alt="">Молдавия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>К</b><a href="kishinev" title="Жильё посуточно в&nbsp;Кишиневе  (18)">Кишинёв</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-25 clearfix">
+				<label class="header-country"><img src="images/countries/flags/138070332644036800.png" alt="">Тайланд</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="pattaya" title="Жильё посуточно в&nbsp;Паттайе  (3)">Паттайя</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-34 clearfix">
+				<label class="header-country"><img src="images/countries/flags/138961188395822100.gif" alt="">Турция</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>А</b><a href="antalia" title="Жильё посуточно в&nbsp;Анталии  (2)">Анталия</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Б</b><a href="belek" title="Жильё посуточно в&nbsp;Белеке  (1)">Белек</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-14 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448962323435800.jpg" alt="">Финляндия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>К</b><a href="kotka" title="Жильё посуточно в&nbsp;Котке  (2)">Котка</a></div>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>Х</b><a href="helsinki" title="Жильё посуточно в&nbsp;Хельсинки  (1)">Хельсинки</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-19 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137604161218915700.png" alt="">Франция</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="paris" title="Жильё посуточно в&nbsp;Париже  (2)">Париж</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-20 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137474779590276100.gif" alt="">Черногория</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="petrovac" title="Жильё посуточно в&nbsp;Петроваце  (5)">Петровац</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-3 clearfix">
+				<label class="header-country"><img src="images/countries/flags/137448963737882800.jpg" alt="">Чехия</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>П</b><a href="praga" title="Жильё посуточно в&nbsp;Праге  (1)">Прага</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			  <li class="city-list-36 clearfix">
+				<label class="header-country"><img src="images/countries/flags/139142207005152100.jpg" alt="">Швеция</label>
+				<div class="list col-lg-2 col-sm-2 col-xs-3"><b>С</b><a href="stokgolm" title="Жильё посуточно в&nbsp;Стокгольме  (4)">Стокгольм</a></div>
+				<div class="empty"></div>
+				<div class="go-to-up"><a href="#top" class="pseudo">наверх</a></div>
+			  </li>
+			</ul>
+		</div>
+	</div>
+	
+	<footer class="footer" role="footer">
+		<div class="container clearfix">
+			<div class="row">
+				<div class="col-lg-10 col-md-9 col-sm-7"><div class="row">
+					<nav class="info-menu col-lg-6 col-md-6 col-sm-12 pull-left">
+						<ul class="info-menu-list list-unstyled">
+							<li><a href="#contact">Контакты</a></li>
+							<li><a href="#delivery">Оплата заказа</a></li>
+							<li><a href="#payment">Пользовательское соглашение</a></li>
+							<li><a href="#service">Гарантия и Сервис</a></li>
+							<li><a href="#stock">Акции</a></li>
+							<li><a href="#credit">Вопросы и ответы</a></li>
+							<li><a href="#credit">Служба поддержки</a></li>
+						</ul>
+					</nav>
+					<div class="subscribe col-lg-6 col-md-6 col-sm-12 pull-left">Подпишитесь на рассылку эксклюзивных предложений 
+						<form class="form-inline" role="form">
+							<input type="email" class="form-control" placeholder="Ваш e-mail"/>
+							<button class="btn btn-primary">Подпишись!</button>
+						</form>
+					</div>
+				</div></div>
+				<div class="social-box col-lg-2 col-md-3 col-sm-5 pull-right">
+					<span>Присоединяйся к нам!</span>
+					<ul class="social-list list-unstyled list-inline">
+						<li>
+							<a href="" class="vk"></a>
+						</li>
+						<li>
+							<a href="" class="fb"></a>
+						</li>
+						<li>
+							<a href="" class="tw"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="copyright_text small">Copyright © 2014 eFlat.com. Все права защищены.</div>
+		</div>
+	</footer>
+</body>
+</html>
