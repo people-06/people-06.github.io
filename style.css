@@ -1,23 +1,12 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
 /* RESET */
 html,body,div,span,h1,h2,pre,a,address,img,strong,ul,li,article,small,footer,header,hgroup,nav,section{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-
-/* Fonts */
-@font-face {
-    font-family: 'sintonyregular';
-    src: url('font/sintony-regular.eot');
-    src: url('font/sintony-regular.eot?#iefix') format('embedded-opentype'),
-         url('font/sintony-regular.woff') format('woff'),
-         url('font/font/sintony-regular.ttf') format('truetype'),
-         url('font/sintony-regular-webfont.svg#sintonyregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
 
 /* Main Style */
 body{
 	color: #fff;
-	font: 16px 'sintonyregular', sans-serif;
+	font: 16px 'Open Sans', sans-serif;
 	min-width: 600px;
 }
 h3, h4{
@@ -62,6 +51,8 @@ aside {
 }
 .logo {
 	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
 	margin-right: 2%;
 	width: 16%;
 	vertical-align: middle;
@@ -90,6 +81,7 @@ aside {
 .main-menu a{
 	color: #FFF;
 	font-size: 18px;
+	font-weight: bold;
 	text-decoration: none;
 	display: inline-block;
 	box-sizing: border-box;
@@ -126,7 +118,6 @@ li pre{
 a.resume{
 	background: #7d499d;
 	margin-left: 0;
-	/*width: 25%;*/
 }
 .portfolio{
 	background: #00aeef;
@@ -144,7 +135,7 @@ a.resume{
 .content-section a:hover{
 	text-decoration: none;
 }
-#resume{
+#summary{
 	background: #7d499d;
 }
 #portfolio{

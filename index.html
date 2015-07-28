@@ -16,10 +16,10 @@
 <body>
 	<header class="header">
 		<div class="wrap">
-			<img src="LikaN.png" class="logo"/>
+			<img src="Anzhelika_Nikanorova.jpg" class="logo"/>
 			<hgroup>
 				<h1 class="name">Lika</h1>
-				<h2 class="occupation">Frontend Developer</h2>
+				<h2 class="occupation">Front-End Developer from Ukraine</h2>
 			</hgroup>
 			<ul class="contact-list">
 				<li><span class="skype">Skype :</span> <a href="skype:people-06?call" title="Skype">people-06</a></li>
@@ -32,56 +32,50 @@
 	
 	<section class="content-section">
 		<nav class="main-menu">
-			<a href="#resume" class="resume" title="Look resume">Resume</a>
+			<a href="#summary" class="resume" title="Look resume">Summary</a>
 			<a href="#portfolio" class="portfolio" title="Some my work">Portfolio</a>
 			<a href="#experience" class="experience" title="My Articles">Experience</a>
 		</nav>
 		
-		<article id="resume">
+		<article id="summary">
 
-			<h3>SUMMARY</h3>
-			<ul class="star-list">
-				<li>Frontend Developer.
-				<li>Experience in PSD-to-HTML, adaptation to different CMS.
-				<li>Learning native JS, English.
+			<p>I'm skilled front-end developer with more than 4 years of experience. And I love and enjoy my profession.
+			Be helpful at the project and for my team doing me happy. I love developing cool sites and trying modern techniques.
+			Honest. Open mind. Team player. Fast learning.</p>
+
+			<h4>My main skills:</h4>
+
+			<ul class="circle-list">
+				<li>HTML5, CSS3, LESS/SASS, mobile optimization - strong working knowledge.
+				<li>JavaScript, jQuery – working knowledge.
+				<li>AngularJS - basics, practicing.
+				<li>PHP - I can do simple tasks.
+				<li>ASP.net /Razor, Ruby/RoR – understanding code.
+				<li>GIT, Grunt
+				<li>PhotoShop, slicing, sprites. Passion to the good design.
+				<li>UX – understanding principles, prototyping.
+				<li>I write responsive, semantic and cross-browser code. Experienced in site optimization.
 			</ul>
 
-			<h4>Skills:</h4>
+			<h4>CMS I worked with:</h4>
+
 			<ul class="circle-list">
-				<li>HTML5 + CSS3
-				<li>LESS, SASS, Bootstrap, sprites
-				<li>Semantic. Cross-browser compatible. Validation. Optimization
-				<li>jQuery, JavaScript – working knowledge
-				<li>PHP, Ruby/RoR, Razor – understanding code
-				<li>UX – understanding basic principles
-				<li>GIT, Mercurial
+				<li>WordPress – creating sites from scratch, developing templates, support existing sites.
+				<li>Composite C1 - developing templates, support existing sites.
+				<li>Joomla, Shop-Script, Codeigniter – debugging of an existing sites.
+				<li>Oracle APEX, Infinity Intershop – Changing default styles, developing modules.
 			</ul>
 
-			<h4>Working with different CMS:</h4>
-			<ul class="circle-list">
-				<li>WordPress, Shop-Script, Composite C1 – developing templates, support existing sites
-				<li>Joomla, Codeigniter – debugging of an existing site
-				<li>Oracle APEX, Infinity Intershop – Changing default styles
-			</ul>
-			<h4>Programs for work:</h4>
-			<ul class="circle-list">
-				<li>Notepad++, VisualStudio, Photoshop, TortoiseHG/GIT, FileZila
-			</ul>
 
-			<h4>About me:</h4>
+			<h4>Software  for work:</h4>
+
 			<ul class="circle-list">
-				<li><pre>if (don't know == true) {
-				while (don't know) {
-					learn++;
-				}
-			  }</pre>
-				<li>Honest. I admit my mistakes.
-				<li>Cheerful and modest.
-				<li>Really like my work.
+				<li>Sublime, PHPStorm, VisualStudio, PhotoShop, GitHub, FileZila
 			</ul>
 
 			<h4>Achievement:</h4>
-			<p>Reached the final Web Challenge-2012 in the category Frontend 3 – (under 3 years of experience).</p>
+			<p><a href="http://uawebchallenge.com/uk/success-stories" alt="Success story at Ukrainian Web Challenge">Reached the final Ukrainian Web Challenge-2012 in the category Frontend 3 – (under 3 years of experience).</a><br><small>My surname was Provoziuk.</small></p>
+			<p>Speech: <a href="http://iqlab.ua/presentations/user-behavior-interacting-with-important-website-elements" alt="Presentation at IQLab">User behavior: interacting with important website elements | IQLab</a></p>
 
 		</article>
 
@@ -217,7 +211,7 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
-	$('article:not(#portfolio)').hide();
+	$('article:not(#summary)').hide();
 	$('.main-menu a').click(function(){
 		var id = $(this).attr('href');
 		$('article').hide("slow");
