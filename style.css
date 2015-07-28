@@ -153,6 +153,9 @@ a.resume{
 #experience{
 	background: #8ec63f;
 }
+#experience h3 {
+	text-transform: uppercase;
+}
 small{
 	font-size: 14px;
 }
