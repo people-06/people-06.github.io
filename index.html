@@ -4,16 +4,10 @@
 	<meta charset="utf-8" />
 	<title>Lika - Frontend Developer</title>
 	<link rel="stylesheet" type="text/css" href="style.css" media="all" />
-	<!--[if lte IE 8]><script>
-	document.createElement('header');
-	document.createElement('hgroup');
-	document.createElement('aside');
-	document.createElement('nav');
-	document.createElement('section');
-	document.createElement('footer');
-	</script><![endif]-->
 </head>
 <body>
+
+<script type='text/x-handlebars' data-template-name='application'>
 	<header class="header">
 		<div class="wrap">
 			<img src="Anzhelika_Nikanorova.jpg" class="logo"/>
@@ -32,160 +26,166 @@
 	
 	<section class="content-section">
 		<nav class="main-menu">
-			<a href="#summary" class="resume tab_link" title="Look resume">Summary</a>
-			<a href="#portfolio" class="portfolio tab_link" title="Some my work">Portfolio</a>
-			<a href="#experience" class="experience tab_link" title="My Articles">Experience</a>
+			<a href="#" class="resume tab_link" title="Look resume">Summary</a>
+			<a href="#/portfolio" class="portfolio tab_link" title="Some my work">Portfolio</a>
+			<a href="#/experience" class="experience tab_link" title="My Articles">Experience</a>
 		</nav>
-		
-		<article class="tab_data" id="summary">
 
-			<p>I'm skilled front-end developer with more than 4 years of experience. And I love and enjoy my profession.
-			Be helpful at the project and for my team doing me happy. I love developing cool sites and trying modern techniques.
-			Honest. Open mind. Team player. Fast learning.</p>
+		<section class="content">
+			{{outlet}}
+		</section>
 
-			<h4>My main skills:</h4>
-
-			<ul class="circle-list">
-				<li>HTML5, CSS3, LESS/SASS, mobile optimization - strong working knowledge.
-				<li>JavaScript, jQuery – working knowledge.
-				<li>AngularJS - basics, practicing.
-				<li>PHP - I can do simple tasks.
-				<li>ASP.net /Razor, Ruby/RoR – understanding code.
-				<li>GIT, Grunt
-				<li>PhotoShop, slicing, sprites. Passion to the good design.
-				<li>UX – understanding principles, prototyping.
-				<li>I write responsive, semantic and cross-browser code. Experienced in site optimization.
-			</ul>
-
-			<h4>CMS I worked with:</h4>
-
-			<ul class="circle-list">
-				<li>WordPress – creating sites from scratch, developing templates, support existing sites.
-				<li>Composite C1 - developing templates, support existing sites.
-				<li>Joomla, Shop-Script, Codeigniter – debugging of an existing sites.
-				<li>Oracle APEX, Infinity Intershop – Changing default styles, developing modules.
-			</ul>
-
-
-			<h4>Software  for work:</h4>
-
-			<ul class="circle-list">
-				<li>Sublime, PHPStorm, VisualStudio, PhotoShop, GitHub, FileZila
-			</ul>
-
-			<h4>Achievement:</h4>
-			<p><a href="http://uawebchallenge.com/uk/success-stories" alt="Success story at Ukrainian Web Challenge">Reached the final Ukrainian Web Challenge-2012 in the category Frontend 3 – (under 3 years of experience).</a><br><small>My surname was Provoziuk.</small></p>
-			<p>Speech: <a href="http://iqlab.ua/presentations/user-behavior-interacting-with-important-website-elements" alt="Presentation at IQLab">User behavior: interacting with important website elements | IQLab</a></p>
-
-		</article>
-
-		<article class="tab_data"  id="portfolio">
-
-			<ul class="circle-list">
-				<li><small>learning platform:</small> Skillcrush <a href="http://skillcrush.com/" rel="nofollow">skillcrush.com</a>
-				<li><small>e-commerce:</small> Gorvozduh <a href="http://gorvozduh.com.ua/" rel="nofollow">gorvozduh.com.ua</a>
-				<li><small>e-commerce:</small> Dalet Bank <a href="http://daletbank.ru/" rel="nofollow">daletbank.ru</a>
-				<li><small>adaptive:</small> Yota Devices <a href="Projects/YotaPhone/index.html" rel="nofollow">YotaPhone</a>
-				<li><small>design, adaptive, bootstrap 3:</small> EFLAT
-					<ul class="circle-list">
-						<li><a href="Projects/eFlat/index.html" title="">eflat: Homepage</a>
-						<li><a href="Projects/eFlat/catalog.html" title="">eflat: Catalog</a>
-						<li><a href="Projects/eFlat/flat.html" title="">eflat: Flat</a>
-						<li><a href="Projects/eFlat/add_flat.html" title="">eflat: Add new flat</a>
-						<li><a href="Projects/eFlat/about.html" title=>eflat: About</a>
-					</ul>
-				</li>
-			</ul>
-			<ul class="circle-list">
-				<li>Coffee Empire <a href="http://coffee-empire.ru/" rel="nofollow">coffee-empire.ru</a>
-				<li>Clear Line <a href="http://fito.passion.ru/" rel="nofollow">fito.passion.ru</a>
-				<!--<li>IOS app (look please on ipad or iphone) <a rel="me" href="/Projects/EatEasy" rel="nofollow">Eat Easy</a>-->
-				<li>Chillout Tour <a href="http://chillout-tour.ru/" rel="nofollow">chillout-tour.ru</a>
-				<li>Knopka24 (Button of life) <a href="http://knopka24.ru/" rel="nofollow">knopka24.ru</a>
-				<li>ODS Laboratory (architecture bureau) <a href="http://www.odslab.com/" rel="nofollow">odslab.com</a>
-				<li>Savage promo <a href="http://savage.passion.ru/" rel="nofollow">savage.passion.ru</a>
-				<li>Test task for Ruby Garage. Developing on RoR. – <a href="http://stormy-falls-8302.herokuapp.com/" title="Link on heroku" rel="nofollow">ToDo List</a>.
-				<li>New Year Card on canvas – <a href="Projects/HappyNewYear/index.html" title="Look Card">Winter card for fun. Canvas</a>
-			</ul>
-			<p>... and much more</p>
-
-		</article>
-
-		<article class="tab_data"  id="experience">
-
-			<h3>Front-end Developer</h3>
-
-			<p><small>Skillcrush, Remote | Apr 2014 – Jul 2015</small></p>
-
-			<p>Skillcrush is learning platform, so I’ve got a lot of different and interesting
-				tasks. My goals was develop mobile version, clear code, creating new
-				pages and implement them to Wordpress, debugging. We developed 2
-				big projects: career path to help get work and multi­step lessons with
-				visual editor. And a lot of small tasks too. Here I used modern
-				techniques and learned php coding.</p>
-
-			<h3>Front-End Developer</h3>
-
-			<p><small>Freelanse, Worldwide | Nov 2013 – Present</small></p>
-
-			<p>This time I developed a lot of big and small projects, like e­commerce
-				sites or just simple brand pages. I learned pre­processors with grunt,
-				improved my skills in site developing from scratch. I love freelance,
-				because here easy and faster implementing new techniques.</p>
-
-			<h3>Front-End Developer</h3>
-
-			<p><small>Acto A/S, Kiev | May 2013 – Nov 2013</small></p>
-
-			<p>Acto small, but awesome modern danish company. I love them. Here I
-				learned a lot of nice developing principles. We used high level asp.net
-				CMS - Composite C1. I was markup new sites with Razor, debugging old
-				sites, migrating to the new versions of Bootstrap. I’m improved my skills
-				in developing high level, semantic and clear code. I learned here LESS,
-				Bootstrap and basic principles of Razor.</p>
-			  
-			<h3>Junior Front-End Developer & Junior UX Designer </h3>
-
-			<p><small>SysIQ Inc., Kiev | September 2012 – May 2013</small><p>
-
-			<p>I love this job not because of front­end developing, but because I
-			improved myself like junior UX designer. Marketing is interesting part of
-			site life cycle. So I developed prototypes and research ux improvements.
-			This skills helped me in future write more clear and semantic code.</p>
-
-			<h3>Intern Front-End Developer</h3>
-
-			<p><small>Design Studio Tadatuta, Alushta (Crimea) | December 2011 – August 2012</small></p>
-
-			<ul class="circle-list">
-			  <li>PSD-to-HTML
-			  <li>Developing sites on WordPress and else CMS.
-			  <li>Support for existing sites.
-			</ul>
-
-			<h3>Administrator</h3>
-
-			<p><small>Mebel Maniya, Freelance | August 2010 – November 2011 (1 year 4 months)</small></p>
-
-			<ul class="circle-list">
-			  <li>Changing some function of site.
-			  <li>Created banners.
-			</ul>
-
-		</article>
-</section>
-
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-	$('article:not(#summary)').hide();
-	$('.main-menu a').click(function(){
-		var id = $(this).attr('href');
-		$('article').hide("slow");
-		$(id).show("slow");
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-	});
+	</section>
 </script>
 
+<script type='text/x-handlebars' data-template-name='index'>
+	<article class="tab_data" id="summary">
+
+		<p>I'm skilled front-end developer with more than 4 years of experience. And I love and enjoy my profession.
+		Be helpful at the project and for my team doing me happy. I love developing cool sites and trying modern techniques.
+		Honest. Open mind. Team player. Fast learning.</p>
+
+		<h4>My main skills:</h4>
+
+		<ul class="circle-list">
+			<li>HTML5, CSS3, LESS/SASS, mobile optimization - strong working knowledge.</li>
+			<li>JavaScript, jQuery – working knowledge.</li>
+			<li>AngularJS - basics, practicing.</li>
+			<li>PHP - I can do simple tasks.</li>
+			<li>ASP.net /Razor, Ruby/RoR – understanding code.</li>
+			<li>GIT, Grunt</li>
+			<li>PhotoShop, slicing, sprites. Passion to the good design.</li>
+			<li>UX – understanding principles, prototyping.</li>
+			<li>I write responsive, semantic and cross-browser code. Experienced in site optimization.</li>
+		</ul>
+
+		<h4>CMS I worked with:</h4>
+
+		<ul class="circle-list">
+			<li>WordPress – creating sites from scratch, developing templates, support existing sites.</li>
+			<li>Composite C1 - developing templates, support existing sites.</li>
+			<li>Joomla, Shop-Script, Codeigniter – debugging of an existing sites.</li>
+			<li>Oracle APEX, Infinity Intershop – Changing default styles, developing modules.</li>
+		</ul>
+
+
+		<h4>Software  for work:</h4>
+
+		<ul class="circle-list">
+			<li>Sublime, PHPStorm, VisualStudio, PhotoShop, GitHub, FileZila</li>
+		</ul>
+
+		<h4>Achievement:</h4>
+		<p><a href="http://uawebchallenge.com/uk/success-stories" alt="Success story at Ukrainian Web Challenge">Reached the final Ukrainian Web Challenge-2012 in the category Frontend 3 – (under 3 years of experience).</a><br><small>My surname was Provoziuk.</small></p>
+		<p>Speech: <a href="http://iqlab.ua/presentations/user-behavior-interacting-with-important-website-elements" alt="Presentation at IQLab">User behavior: interacting with important website elements | IQLab</a></p>
+
+	</article>
+</script>
+
+<script type='text/x-handlebars' data-template-name='portfolio'>
+	<article class="tab_data"  id="portfolio">
+
+		<ul class="circle-list">
+			<li><small>learning platform:</small> Skillcrush <a href="http://skillcrush.com/" rel="nofollow">skillcrush.com</a></li>
+			<li><small>e-commerce:</small> Gorvozduh <a href="http://gorvozduh.com.ua/" rel="nofollow">gorvozduh.com.ua</a></li>
+			<li><small>e-commerce:</small> Dalet Bank <a href="http://daletbank.ru/" rel="nofollow">daletbank.ru</a></li>
+			<li><small>adaptive:</small> Yota Devices <a href="Projects/YotaPhone/index.html" rel="nofollow">YotaPhone</a></li>
+			<li><small>design, adaptive, bootstrap 3:</small> EFLAT
+				<ul class="circle-list">
+					<li><a href="Projects/eFlat/index.html" title="">eflat: Homepage</a></li>
+					<li><a href="Projects/eFlat/catalog.html" title="">eflat: Catalog</a></li>
+					<li><a href="Projects/eFlat/flat.html" title="">eflat: Flat</a></li>
+					<li><a href="Projects/eFlat/add_flat.html" title="">eflat: Add new flat</a></li>
+					<li><a href="Projects/eFlat/about.html" title=>eflat: About</a></li>
+				</ul>
+			</li>
+		</ul>
+		<ul class="circle-list">
+			<li>Coffee Empire <a href="http://coffee-empire.ru/" rel="nofollow">coffee-empire.ru</a></li>
+			<li>Clear Line <a href="http://fito.passion.ru/" rel="nofollow">fito.passion.ru</a></li>
+			<!--<li>IOS app (look please on ipad or iphone) <a rel="me" href="/Projects/EatEasy" rel="nofollow">Eat Easy</a></li>-->
+			<li>Chillout Tour <a href="http://chillout-tour.ru/" rel="nofollow">chillout-tour.ru</a></li>
+			<li>Knopka24 (Button of life) <a href="http://knopka24.ru/" rel="nofollow">knopka24.ru</a></li>
+			<li>ODS Laboratory (architecture bureau) <a href="http://www.odslab.com/" rel="nofollow">odslab.com</a></li>
+			<li>Savage promo <a href="http://savage.passion.ru/" rel="nofollow">savage.passion.ru</a></li>
+			<li>Test task for Ruby Garage. Developing on RoR. – <a href="http://stormy-falls-8302.herokuapp.com/" title="Link on heroku" rel="nofollow">ToDo List</a>.</li>
+			<li>New Year Card on canvas – <a href="Projects/HappyNewYear/index.html" title="Look Card">Winter card for fun. Canvas</a></li>
+		</ul>
+		<p>... and much more</p>
+
+	</article>
+</script>
+
+<script type='text/x-handlebars' data-template-name='experience'>
+	<article class="tab_data"  id="experience">
+
+		<h3>Front-end Developer</h3>
+
+		<p><small>Skillcrush, Remote | Apr 2014 – Jul 2015</small></p>
+
+		<p>Skillcrush is learning platform, so I’ve got a lot of different and interesting
+			tasks. My goals was develop mobile version, clear code, creating new
+			pages and implement them to Wordpress, debugging. We developed 2
+			big projects: career path to help get work and multi­step lessons with
+			visual editor. And a lot of small tasks too. Here I used modern
+			techniques and learned php coding.</p>
+
+		<h3>Front-End Developer</h3>
+
+		<p><small>Freelanse, Worldwide | Nov 2013 – Present</small></p>
+
+		<p>This time I developed a lot of big and small projects, like e­commerce
+			sites or just simple brand pages. I learned pre­processors with grunt,
+			improved my skills in site developing from scratch. I love freelance,
+			because here easy and faster implementing new techniques.</p>
+
+		<h3>Front-End Developer</h3>
+
+		<p><small>Acto A/S, Kiev | May 2013 – Nov 2013</small></p>
+
+		<p>Acto small, but awesome modern danish company. I love them. Here I
+			learned a lot of nice developing principles. We used high level asp.net
+			CMS - Composite C1. I was markup new sites with Razor, debugging old
+			sites, migrating to the new versions of Bootstrap. I’m improved my skills
+			in developing high level, semantic and clear code. I learned here LESS,
+			Bootstrap and basic principles of Razor.</p>
+
+		<h3>Junior Front-End Developer & Junior UX Designer </h3>
+
+		<p><small>SysIQ Inc., Kiev | September 2012 – May 2013</small></p>
+
+		<p>I love this job not because of front­end developing, but because I
+		improved myself like junior UX designer. Marketing is interesting part of
+		site life cycle. So I developed prototypes and research ux improvements.
+		This skills helped me in future write more clear and semantic code.</p>
+
+		<h3>Intern Front-End Developer</h3>
+
+		<p><small>Design Studio Tadatuta, Alushta (Crimea) | December 2011 – August 2012</small></p>
+
+		<ul class="circle-list">
+		  <li>PSD-to-HTML</li>
+		  <li>Developing sites on WordPress and else CMS.</li>
+		  <li>Support for existing sites.</li>
+		</ul>
+
+		<h3>Administrator</h3>
+
+		<p><small>Mebel Maniya, Freelance | August 2010 – November 2011 (1 year 4 months)</small></p>
+
+		<ul class="circle-list">
+		  <li>Changing some function of site.</li>
+		  <li>Created banners.</li>
+		</ul>
+
+	</article>
+</script>
+
+<script src="http://emberjs.com.s3.amazonaws.com/getting-started/jquery.min.js"></script>
+<script src="http://emberjs.com.s3.amazonaws.com/getting-started/handlebars.js"></script>
+<script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember.js"></script>
+<script src="http://emberjs.com.s3.amazonaws.com/getting-started/ember-data.js"></script>
+<script src="JS/app.js"></script>
 
 </body>
 </html>
