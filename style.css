@@ -7,7 +7,6 @@ html,body,div,span,h1,h2,pre,a,address,img,strong,ul,li,article,small,footer,hea
 body{
 	color: #fff;
 	font: 16px 'Open Sans', sans-serif;
-	min-width: 600px;
 }
 h3, h4{
 	font-weight: normal;
@@ -56,6 +55,7 @@ aside {
 	margin-right: 2%;
 	width: 16%;
 	vertical-align: middle;
+	max-width: 200px;
 }
 .contact-list {
 	display: inline-block;
@@ -153,4 +153,35 @@ small{
 .liveinternet{
 	position: absolute;
 	text-indent: -999em;
+}
+
+@media screen and (max-width: 940px) {
+	body {
+		font-size: 18px;
+	}
+	.logo {
+		width: 30%;
+		max-width: 150px;
+	}
+	.header hgroup {
+		width: 60%;
+	}
+	.contact-list {
+		display: block;
+		margin-top: 1em;
+		width: auto;
+	}
+	.content-section article {
+		padding: 1em;
+	}
+
+}
+@media screen and (max-width: 460px) {
+	.main-menu a {
+		display: block;
+		margin: 0;
+		padding: 1em;
+		width: 100%;
+	}
+
 }
